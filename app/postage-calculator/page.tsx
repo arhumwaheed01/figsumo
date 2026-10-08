@@ -4,11 +4,13 @@ import { pageMetadata } from "@/lib/seo";
 import { getCalculator } from "@/lib/site";
 
 const calc = getCalculator("postage-calculator")!;
+const heading = "Postage Calculator — US Letter Guide";
+const description =
+  "Rough domestic US postage by weight for letters and flats. Free guide, no signup—not USPS.";
 
 export const metadata = pageMetadata({
-  title: "Postage Calculator",
-  description:
-    "Domestic US postage guide by weight for letters and flats. Not USPS—confirm rates before you mail.",
+  title: `${heading} | Figsumo`,
+  description,
   path: "/postage-calculator",
 });
 
@@ -16,7 +18,9 @@ export default function Page() {
   return (
     <CalculatorShell
       calc={calc}
+      heading={heading}
       intro="Enter weight in ounces and choose letter or flat. Guide only—not USPS."
+      metaDescription={description}
       faqs={[
         {
           question: "Is this an official USPS calculator?",

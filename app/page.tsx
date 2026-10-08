@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
-import { CALCULATORS, SITE_NAME } from "@/lib/site";
+import { CALCULATORS } from "@/lib/site";
 
 export const metadata = pageMetadata({
-  title: `${SITE_NAME} — Free Calculators`,
+  title: "Free Job Calculators | Figsumo",
   description:
-    "Free calculators for jobs people actually search. Concrete, paint, tile, overtime, age, GPA, postage, and tip.",
+    "Free job calculators for paint, concrete, tile, overtime, and more. Run in your browser—free, no signup.",
   path: "/",
 });
 

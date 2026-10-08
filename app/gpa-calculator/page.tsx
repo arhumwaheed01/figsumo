@@ -4,11 +4,13 @@ import { pageMetadata } from "@/lib/seo";
 import { getCalculator } from "@/lib/site";
 
 const calc = getCalculator("gpa-calculator")!;
+const heading = "GPA Calculator — 4.0 Scale Credits";
+const description =
+  "Compute a weighted GPA on a 4.0 scale from course credits and letter grades. Free, no signup.";
 
 export const metadata = pageMetadata({
-  title: "GPA Calculator",
-  description:
-    "Free GPA calculator on a 4.0 scale. Add courses, credits, and letter grades; GPA updates as you type.",
+  title: `${heading} | Figsumo`,
+  description,
   path: "/gpa-calculator",
 });
 
@@ -16,7 +18,9 @@ export default function Page() {
   return (
     <CalculatorShell
       calc={calc}
+      heading={heading}
       intro="Enter each course, its credits, and letter grade."
+      metaDescription={description}
       faqs={[
         {
           question: "What letter grades are supported?",

@@ -1,41 +1,52 @@
 import type { ReactNode } from "react";
-import { calculatorJsonLd } from "@/lib/seo";
+import {
+  faqPageJsonLd,
+  jsonLdScript,
+  webApplicationJsonLd,
+  type FaqItem,
+} from "@/lib/seo";
 import type { CalculatorMeta } from "@/lib/site";
-
-type Faq = { question: string; answer: string };
 
 type CalculatorShellProps = {
   calc: CalculatorMeta;
+  /** Visible H1 — same words as the title topic (no | Figsumo). */
+  heading: string;
   intro: string;
-  faqs: Faq[];
+  metaDescription: string;
+  faqs: FaqItem[];
   children: ReactNode;
 };
 
 export function CalculatorShell({
   calc,
+  heading,
   intro,
+  metaDescription,
   faqs,
   children,
 }: CalculatorShellProps) {
   const path = `/${calc.slug}`;
-  const jsonLd = calculatorJsonLd({
-    name: calc.title,
-    description: calc.description,
+  const webApp = webApplicationJsonLd({
+    name: heading,
+    description: metaDescription,
     path,
     formula: calc.formula,
   });
+  const faqLd = faqPageJsonLd(faqs);
 
   return (
     <article className="mx-auto w-full max-w-[640px] px-4 py-6 sm:py-8">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
-        }}
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(webApp) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(faqLd) }}
       />
 
       <h1 className="text-2xl font-semibold tracking-tight text-[#18181b]">
-        {calc.title}
+        {heading}
       </h1>
       <p className="mt-2 text-[15px] leading-snug text-[#71717a]">{intro}</p>
 
@@ -49,10 +60,7 @@ export function CalculatorShell({
         <div>
           <h2 className="font-medium text-[#71717a]">Example</h2>
           <p className="mt-1 leading-relaxed">{calc.example}</p>
-        </div>
-        <div>
-          <h2 className="font-medium text-[#71717a]">When this is wrong</h2>
-          <p className="mt-1 leading-relaxed">{calc.whenWrong}</p>
+          <p className="mt-3 leading-relaxed">{calc.whenWrong}</p>
         </div>
       </section>
 

@@ -1,30 +1,34 @@
 import { pageMetadata } from "@/lib/seo";
-import { SITE_NAME, SITE_TAGLINE } from "@/lib/site";
+import { SITE_NAME } from "@/lib/site";
 
 export const metadata = pageMetadata({
-  title: "About",
+  title: "About | Figsumo",
   description:
-    "Figsumo is a small free calculator site. No accounts, no database—just tools that run in your browser.",
+    "Figsumo is a small free calculator site built for real job searches. Results are estimates—free, no signup.",
   path: "/about",
 });
 
 export default function AboutPage() {
   return (
     <article className="mx-auto w-full max-w-[640px] px-4 py-8">
-      <h1 className="text-3xl font-semibold tracking-tight text-zinc-900">
+      <h1 className="text-2xl font-semibold tracking-tight text-[#18181b]">
         About {SITE_NAME}
       </h1>
-      <div className="mt-6 space-y-4 text-base leading-relaxed text-zinc-700">
-        <p>{SITE_TAGLINE}</p>
+      <div className="mt-6 space-y-4 text-base leading-relaxed text-[#3f3f46]">
         <p>
-          {SITE_NAME} is a narrow site: a handful of calculators people actually
-          search for, with the formula and an example on every page. Math runs
-          in your browser. There is no account system and no database.
+          {SITE_NAME} is a small free calculator site. It was built to answer
+          common searches—paint, concrete, tile, overtime, and a few everyday
+          tools—without accounts or clutter.
         </p>
         <p>
-          Results are estimates for planning. Building codes, school policies,
-          payroll rules, and postage rates vary. When it matters, double-check
-          with a professional or the official source.
+          Every tool runs in your browser. There is no login and no database of
+          your inputs. Each page shows the formula and an example so you can
+          check the math.
+        </p>
+        <p>
+          Results are estimates for planning. Codes, school policies, payroll
+          rules, and postage rates vary. When accuracy matters, confirm with a
+          professional or the official source.
         </p>
       </div>
     </article>

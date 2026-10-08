@@ -4,11 +4,13 @@ import { pageMetadata } from "@/lib/seo";
 import { getCalculator } from "@/lib/site";
 
 const calc = getCalculator("age-calculator")!;
+const heading = "Age Calculator — Years, Months, Days";
+const description =
+  "Find age in years, months, and days from a birth date to today or another date. Free, no signup.";
 
 export const metadata = pageMetadata({
-  title: "Age Calculator",
-  description:
-    "Free age calculator: years, months, and days from a birth date to today or another date.",
+  title: `${heading} | Figsumo`,
+  description,
   path: "/age-calculator",
 });
 
@@ -16,7 +18,9 @@ export default function Page() {
   return (
     <CalculatorShell
       calc={calc}
+      heading={heading}
       intro="Enter a birth date and an as-of date (defaults to today)."
+      metaDescription={description}
       faqs={[
         {
           question: "How is age in months and days calculated?",

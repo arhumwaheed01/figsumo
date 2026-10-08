@@ -4,11 +4,13 @@ import { pageMetadata } from "@/lib/seo";
 import { getCalculator } from "@/lib/site";
 
 const calc = getCalculator("tile-calculator")!;
+const heading = "Tile Calculator — Room Tiles + Waste";
+const description =
+  "Count tiles for a room with tile size, grout gap, and 10% waste. Free tile calculator, no signup.";
 
 export const metadata = pageMetadata({
-  title: "Tile Calculator",
-  description:
-    "Free tile calculator: tiles needed for a room with tile size, grout gap, and 10% waste.",
+  title: `${heading} | Figsumo`,
+  description,
   path: "/tile-calculator",
 });
 
@@ -16,7 +18,9 @@ export default function Page() {
   return (
     <CalculatorShell
       calc={calc}
+      heading={heading}
       intro="Enter room size, tile size, and grout gap. Includes 10% waste."
+      metaDescription={description}
       faqs={[
         {
           question: "Why add 10% waste?",

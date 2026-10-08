@@ -4,11 +4,13 @@ import { pageMetadata } from "@/lib/seo";
 import { getCalculator } from "@/lib/site";
 
 const calc = getCalculator("concrete-calculator")!;
+const heading = "Concrete Calculator — Cubic Yards & Bags";
+const description =
+  "Estimate concrete cubic yards and 80 lb bags from length, width, and depth. Free, no signup.";
 
 export const metadata = pageMetadata({
-  title: "Concrete Calculator",
-  description:
-    "Free concrete calculator: cubic yards and 80 lb bags from length, width, and depth in feet or inches.",
+  title: `${heading} | Figsumo`,
+  description,
   path: "/concrete-calculator",
 });
 
@@ -16,7 +18,9 @@ export default function Page() {
   return (
     <CalculatorShell
       calc={calc}
+      heading={heading}
       intro="Enter length, width, and depth for a rectangular pour."
+      metaDescription={description}
       faqs={[
         {
           question: "How many 80 lb bags are in a cubic yard?",

@@ -4,11 +4,13 @@ import { pageMetadata } from "@/lib/seo";
 import { getCalculator } from "@/lib/site";
 
 const calc = getCalculator("paint-calculator")!;
+const heading = "Paint Calculator — Gallons for One Wall";
+const description =
+  "Estimate paint gallons for one wall from size, coats, doors, and windows. Free, no signup.";
 
 export const metadata = pageMetadata({
-  title: "Paint Calculator",
-  description:
-    "Free paint calculator: estimate gallons from wall size, coats, coverage, doors, and windows.",
+  title: `${heading} | Figsumo`,
+  description,
   path: "/paint-calculator",
 });
 
@@ -16,7 +18,9 @@ export default function Page() {
   return (
     <CalculatorShell
       calc={calc}
+      heading={heading}
       intro="Enter wall size, coats, coverage, and any doors or windows to subtract."
+      metaDescription={description}
       faqs={[
         {
           question: "How do I paint a whole room?",

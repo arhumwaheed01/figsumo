@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { SITE_NAME, SITE_URL } from "./site";
 
+export type FaqItem = { question: string; answer: string };
+
+/** Absolute page title (already includes | Figsumo when needed). */
 export function pageMetadata({
   title,
   description,
@@ -10,15 +13,14 @@ export function pageMetadata({
   description: string;
   path: string;
 }): Metadata {
-  const url = `${SITE_URL}${path === "/" ? "" : path}`;
-  const fullTitle = path === "/" ? title : `${title} | ${SITE_NAME}`;
+  const url = path === "/" ? SITE_URL : `${SITE_URL}${path}`;
 
   return {
-    title: path === "/" ? { absolute: title } : title,
+    title: { absolute: title },
     description,
     alternates: { canonical: url },
     openGraph: {
-      title: fullTitle,
+      title,
       description,
       url,
       siteName: SITE_NAME,
@@ -27,13 +29,13 @@ export function pageMetadata({
     },
     twitter: {
       card: "summary",
-      title: fullTitle,
+      title,
       description,
     },
   };
 }
 
-export function calculatorJsonLd({
+export function webApplicationJsonLd({
   name,
   description,
   path,
@@ -52,6 +54,7 @@ export function calculatorJsonLd({
     url: `${SITE_URL}${path}`,
     applicationCategory: "UtilityApplication",
     operatingSystem: "Any",
+    browserRequirements: "Requires JavaScript",
     offers: {
       "@type": "Offer",
       price: "0",
@@ -64,4 +67,23 @@ export function calculatorJsonLd({
     },
     featureList: formula,
   };
+}
+
+export function faqPageJsonLd(faqs: FaqItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+}
+
+export function jsonLdScript(data: object) {
+  return JSON.stringify(data).replace(/</g, "\\u003c");
 }

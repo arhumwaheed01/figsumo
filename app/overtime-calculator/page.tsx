@@ -4,11 +4,13 @@ import { pageMetadata } from "@/lib/seo";
 import { getCalculator } from "@/lib/site";
 
 const calc = getCalculator("overtime-calculator")!;
+const heading = "Overtime Calculator — Hourly Pay Estimate";
+const description =
+  "Estimate regular pay, overtime at 1.5×, and total from your hourly rate. Free, no signup.";
 
 export const metadata = pageMetadata({
-  title: "Overtime Calculator",
-  description:
-    "Free overtime pay calculator: regular pay, overtime at 1.5×, and total from hourly rate.",
+  title: `${heading} | Figsumo`,
+  description,
   path: "/overtime-calculator",
 });
 
@@ -16,7 +18,9 @@ export default function Page() {
   return (
     <CalculatorShell
       calc={calc}
+      heading={heading}
       intro="Enter hourly rate, regular hours, overtime hours, and the overtime multiplier."
+      metaDescription={description}
       faqs={[
         {
           question: "Is overtime always 1.5 times pay?",

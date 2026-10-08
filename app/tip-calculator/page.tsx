@@ -4,11 +4,13 @@ import { pageMetadata } from "@/lib/seo";
 import { getCalculator } from "@/lib/site";
 
 const calc = getCalculator("tip-calculator")!;
+const heading = "Tip Calculator — Bill Split & Tip";
+const description =
+  "Calculate tip and split the bill across people with 15–25% presets. Free tip calculator, no signup.";
 
 export const metadata = pageMetadata({
-  title: "Tip Calculator",
-  description:
-    "Free tip calculator with 15/18/20/25% presets. See tip, total, and per-person split.",
+  title: `${heading} | Figsumo`,
+  description,
   path: "/tip-calculator",
 });
 
@@ -16,7 +18,9 @@ export default function Page() {
   return (
     <CalculatorShell
       calc={calc}
+      heading={heading}
       intro="Enter the bill, tip percent, and how many people split it."
+      metaDescription={description}
       faqs={[
         {
           question: "Should I tip on pre-tax or post-tax?",
