@@ -38,7 +38,7 @@ export function OvertimeCalculator() {
   }, [anyBad, rate, regularHours, otHours, multiplier]);
 
   return (
-    <div className="space-y-5">
+    <div className="space-y-4">
       <CalcForm>
         <Field
           label="Hourly rate"
@@ -105,7 +105,7 @@ export function OvertimeCalculator() {
         <ResultCard
           value={money(pay.total)}
           unit="total pay"
-          breakdown={`Regular ${money(pay.regularPay)} · Overtime ${money(pay.otPay)} · estimate only`}
+          breakdown={`Regular ${money(pay.regularPay)}, overtime ${money(pay.otPay)} (estimate).`}
         />
       ) : (
         <ResultCard value="—" unit="total pay" />

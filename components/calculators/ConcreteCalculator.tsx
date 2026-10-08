@@ -41,7 +41,7 @@ export function ConcreteCalculator() {
   }, [anyBad, length, width, depth, depthUnit]);
 
   return (
-    <div className="space-y-5">
+    <div className="space-y-4">
       <CalcForm>
         <Field
           label="Length"
@@ -101,7 +101,7 @@ export function ConcreteCalculator() {
         <ResultCard
           value={cubicYards.toFixed(2)}
           unit="cubic yards"
-          breakdown={`About ${bags} bags of 80 lb mix`}
+          breakdown={`About ${bags} bags of 80 lb mix.`}
         />
       ) : (
         <ResultCard value="—" unit="cubic yards" />

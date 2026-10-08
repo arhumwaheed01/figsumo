@@ -38,7 +38,7 @@ export function TipCalculator() {
   }, [anyBad, bill, percent, people]);
 
   return (
-    <div className="space-y-5">
+    <div className="space-y-4">
       <CalcForm>
         <Field
           label="Bill amount"
@@ -64,10 +64,10 @@ export function TipCalculator() {
                 key={p}
                 type="button"
                 onClick={() => setPercent(String(p))}
-                className={`min-h-11 min-w-[3.25rem] rounded border px-3 text-sm font-medium ${
+                className={`h-12 min-w-[3.25rem] rounded-lg border px-3 text-sm font-medium ${
                   Number(percent) === p
-                    ? "border-zinc-700 bg-zinc-700 text-white"
-                    : "border-zinc-300 bg-white text-zinc-800"
+                    ? "border-[#3f3f46] bg-[#3f3f46] text-white"
+                    : "border-[#e4e4e7] bg-white text-[#18181b]"
                 }`}
               >
                 {p}%
@@ -113,7 +113,7 @@ export function TipCalculator() {
         <ResultCard
           value={money(result.total)}
           unit="total with tip"
-          breakdown={`Tip ${money(result.tip)} · ${money(result.perPerson)} per person`}
+          breakdown={`Tip ${money(result.tip)}; ${money(result.perPerson)} per person.`}
         />
       ) : (
         <ResultCard value="—" unit="total with tip" />

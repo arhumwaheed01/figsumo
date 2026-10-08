@@ -38,7 +38,7 @@ export function TileCalculator() {
   }, [anyBad, roomLength, roomWidth, tileSize, grout]);
 
   return (
-    <div className="space-y-5">
+    <div className="space-y-4">
       <CalcForm>
         <Field
           label="Room length"
@@ -103,7 +103,7 @@ export function TileCalculator() {
         <ResultCard
           value={String(result.withWaste)}
           unit="tiles"
-          breakdown={`${result.tiles} exact (${result.alongL} × ${result.alongW}), plus 10% waste`}
+          breakdown={`${result.tiles} exact (${result.alongL} × ${result.alongW}), plus 10% waste.`}
         />
       ) : (
         <ResultCard value="—" unit="tiles" />

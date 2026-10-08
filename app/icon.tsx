@@ -14,39 +14,40 @@ export default function Icon() {
           alignItems: "center",
           justifyContent: "center",
           background: "#3f3f46",
-          borderRadius: 6,
+          borderRadius: 7,
         }}
       >
         <div
           style={{
             display: "flex",
-            width: 18,
+            flexDirection: "column",
+            alignItems: "center",
+            width: 16,
             height: 18,
-            position: "relative",
+            border: "1.75px solid #ffffff",
+            borderRadius: 2,
+            paddingTop: 2,
+            paddingLeft: 2,
+            paddingRight: 2,
           }}
         >
           <div
             style={{
-              position: "absolute",
-              left: 0,
-              bottom: 0,
-              width: 5,
-              height: 18,
+              width: "100%",
+              height: 3,
               background: "#ffffff",
               borderRadius: 1,
+              marginBottom: 3,
             }}
           />
-          <div
-            style={{
-              position: "absolute",
-              left: 0,
-              bottom: 0,
-              width: 18,
-              height: 5,
-              background: "#ffffff",
-              borderRadius: 1,
-            }}
-          />
+          <div style={{ display: "flex", gap: 2.5, marginBottom: 2.5 }}>
+            <div style={{ width: 2.5, height: 2.5, borderRadius: 999, background: "#ffffff" }} />
+            <div style={{ width: 2.5, height: 2.5, borderRadius: 999, background: "#ffffff" }} />
+            <div style={{ width: 2.5, height: 2.5, borderRadius: 999, background: "#ffffff" }} />
+          </div>
+          <div style={{ display: "flex" }}>
+            <div style={{ width: 2.5, height: 2.5, borderRadius: 999, background: "#ffffff" }} />
+          </div>
         </div>
       </div>
     ),

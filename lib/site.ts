@@ -36,7 +36,7 @@ export const CALCULATORS: CalculatorMeta[] = [
     formula:
       "Gallons = ((wall length × height − door area − window area) × coats) ÷ coverage per gallon.",
     example:
-      "A 12 ft × 8 ft wall with 2 coats at 350 sq ft/gal needs about 0.55 gallons (buy 1 gallon).",
+      "A 12 ft × 8 ft wall, minus 20 sq ft door and 15 sq ft window, with 2 coats at 350 sq ft/gal needs about 0.35 gallons (buy 1 gallon).",
     whenWrong:
       "Texture, primer, dark colors, and porous surfaces use more paint. Coverage on the can is usually optimistic.",
   },
@@ -98,7 +98,7 @@ export const CALCULATORS: CalculatorMeta[] = [
     group: "Everyday",
     formula:
       "Look up weight in a simple letter vs large envelope (flat) rate table. Rates are a guide and change.",
-    example: "A 1 oz First-Class letter is typically the base letter rate; a 3 oz flat costs more.",
+    example: "A 1 oz domestic letter is about $0.73 on this guide; a heavier flat costs more.",
     whenWrong:
       "Not USPS. Shape, thickness, destination, and current rates matter. Confirm at usps.com before mailing.",
   },

@@ -78,7 +78,7 @@ export function PostageCalculator() {
   }, [weightBad, weight, mailType]);
 
   return (
-    <div className="space-y-5">
+    <div className="space-y-4">
       <CalcForm>
         <Field
           label="Weight"
@@ -111,7 +111,7 @@ export function PostageCalculator() {
         <ResultCard
           value={money(result.price)}
           unit="guide rate"
-          breakdown={`Domestic US ${mailType === "letter" ? "letter" : "flat"} · not USPS — confirm at usps.com`}
+          breakdown={`Domestic US ${mailType === "letter" ? "letter" : "flat"} guide — confirm at usps.com.`}
         />
       ) : (
         <ResultCard

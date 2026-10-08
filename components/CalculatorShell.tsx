@@ -1,5 +1,4 @@
 import type { ReactNode } from "react";
-import { AdSlot } from "./AdSlot";
 import { calculatorJsonLd } from "@/lib/seo";
 import type { CalculatorMeta } from "@/lib/site";
 
@@ -27,7 +26,7 @@ export function CalculatorShell({
   });
 
   return (
-    <article className="mx-auto w-full max-w-[640px] px-4 py-6">
+    <article className="mx-auto w-full max-w-[640px] px-4 py-6 sm:py-8">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -35,47 +34,41 @@ export function CalculatorShell({
         }}
       />
 
-      <h1 className="text-2xl font-semibold tracking-tight text-zinc-900 sm:text-3xl">
+      <h1 className="text-2xl font-semibold tracking-tight text-[#18181b]">
         {calc.title}
       </h1>
-      <p className="mt-2 text-[15px] leading-snug text-zinc-600">{intro}</p>
+      <p className="mt-2 text-[15px] leading-snug text-[#71717a]">{intro}</p>
 
-      <div className="mt-5">{children}</div>
+      <div className="mt-6">{children}</div>
 
-      <section className="mt-10 space-y-5 border-t border-zinc-200 pt-6 text-sm text-zinc-500">
+      <section className="mt-12 space-y-5 text-sm text-[#71717a]">
         <div>
-          <h2 className="text-sm font-medium text-zinc-600">Formula</h2>
+          <h2 className="font-medium text-[#71717a]">Formula</h2>
           <p className="mt-1 leading-relaxed">{calc.formula}</p>
         </div>
         <div>
-          <h2 className="text-sm font-medium text-zinc-600">Example</h2>
+          <h2 className="font-medium text-[#71717a]">Example</h2>
           <p className="mt-1 leading-relaxed">{calc.example}</p>
         </div>
         <div>
-          <h2 className="text-sm font-medium text-zinc-600">
-            When this is wrong
-          </h2>
+          <h2 className="font-medium text-[#71717a]">When this is wrong</h2>
           <p className="mt-1 leading-relaxed">{calc.whenWrong}</p>
         </div>
       </section>
 
-      <section className="mt-8 border-t border-zinc-200 pt-6">
-        <h2 className="text-sm font-medium text-zinc-600">FAQ</h2>
+      <section className="mt-10 text-sm text-[#71717a]">
+        <h2 className="font-medium text-[#71717a]">FAQ</h2>
         <dl className="mt-3 space-y-4">
           {faqs.map((faq) => (
             <div key={faq.question}>
-              <dt className="text-sm font-medium text-zinc-700">
-                {faq.question}
-              </dt>
-              <dd className="mt-1 text-sm leading-relaxed text-zinc-500">
-                {faq.answer}
-              </dd>
+              <dt className="font-medium text-[#52525b]">{faq.question}</dt>
+              <dd className="mt-1 leading-relaxed">{faq.answer}</dd>
             </div>
           ))}
         </dl>
       </section>
 
-      <AdSlot />
+      {/* Ad slot: place AdSense (or similar) here later, below the FAQ only. */}
     </article>
   );
 }

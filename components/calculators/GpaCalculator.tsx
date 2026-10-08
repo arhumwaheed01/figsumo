@@ -82,7 +82,7 @@ export function GpaCalculator() {
   }
 
   return (
-    <div className="space-y-5">
+    <div className="space-y-4">
       <CalcForm>
         {rows.map((row, index) => (
           <div key={row.id} className="space-y-3 border-b border-zinc-200 pb-4">

@@ -1,18 +1,16 @@
 import Link from "next/link";
-import { SITE_NAME } from "@/lib/site";
 
 export function Footer() {
   return (
-    <footer className="mt-auto border-t border-zinc-200">
-      <div className="mx-auto flex max-w-[640px] flex-wrap items-center gap-x-4 gap-y-1 px-4 py-5 text-xs text-zinc-500">
-        <span>© 2026 {SITE_NAME}</span>
-        <Link href="/about" className="hover:text-zinc-800">
+    <footer className="mt-auto border-t border-[#e4e4e7]">
+      <div className="mx-auto flex max-w-[640px] flex-wrap items-center gap-x-5 gap-y-1 px-4 py-4 text-xs text-[#71717a]">
+        <Link href="/about" className="hover:text-[#18181b]">
           About
         </Link>
-        <Link href="/privacy" className="hover:text-zinc-800">
+        <Link href="/privacy" className="hover:text-[#18181b]">
           Privacy
         </Link>
-        <Link href="/contact" className="hover:text-zinc-800">
+        <Link href="/contact" className="hover:text-[#18181b]">
           Contact
         </Link>
       </div>

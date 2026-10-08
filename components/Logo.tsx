@@ -1,42 +1,47 @@
 import Link from "next/link";
 
-type LogoProps = {
-  className?: string;
-};
-
-export function LogoMark({ className = "h-8 w-8" }: { className?: string }) {
+/** 28px grey rounded square with a white calculator glyph. */
+export function LogoMark({ className = "h-7 w-7" }: { className?: string }) {
   return (
     <svg
       className={className}
-      viewBox="0 0 40 40"
+      width={28}
+      height={28}
+      viewBox="0 0 28 28"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
     >
-      <rect width="40" height="40" rx="8" fill="#3f3f46" />
-      {/* Right-angle ruler */}
-      <path
-        d="M10 28V12h3v13h13v3H10z"
-        fill="#ffffff"
+      <rect width="28" height="28" rx="6" fill="#3f3f46" />
+      <rect
+        x="7"
+        y="6"
+        width="14"
+        height="16"
+        rx="1.5"
+        stroke="#ffffff"
+        strokeWidth="1.5"
+        fill="none"
       />
-      <path
-        d="M13 15h2M13 18h2M13 21h2M13 24h2M16 28v-2M19 28v-2M22 28v-2"
-        stroke="#3f3f46"
-        strokeWidth="1.2"
-        strokeLinecap="round"
-      />
+      <rect x="9.25" y="8.25" width="9.5" height="2.75" rx="0.5" fill="#ffffff" />
+      <circle cx="10.5" cy="14.5" r="1.1" fill="#ffffff" />
+      <circle cx="14" cy="14.5" r="1.1" fill="#ffffff" />
+      <circle cx="17.5" cy="14.5" r="1.1" fill="#ffffff" />
+      <circle cx="12.25" cy="18" r="1.1" fill="#ffffff" />
     </svg>
   );
 }
 
-export function Logo({ className = "" }: LogoProps) {
+export function Logo({ className = "" }: { className?: string }) {
   return (
     <Link
       href="/"
-      className={`inline-flex items-center gap-2.5 text-zinc-900 no-underline ${className}`}
+      className={`inline-flex items-center gap-2.5 no-underline ${className}`}
     >
       <LogoMark />
-      <span className="text-base font-semibold tracking-tight">Figsumo</span>
+      <span className="text-base font-semibold tracking-tight text-[#18181b]">
+        Figsumo
+      </span>
     </Link>
   );
 }

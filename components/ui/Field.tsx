@@ -6,6 +6,11 @@ import type {
 
 export const ERR_GT_ZERO = "Enter a number greater than 0.";
 
+const focusRing =
+  "focus-within:border-[#3f3f46] focus-within:ring-2 focus-within:ring-[#3f3f46]/30";
+const focusRingInvalid =
+  "focus-within:border-red-500 focus-within:ring-2 focus-within:ring-red-500/30";
+
 export function Field({
   label,
   htmlFor,
@@ -20,22 +25,22 @@ export function Field({
   error?: string | null;
 }) {
   return (
-    <div className="space-y-1">
+    <div className="space-y-1.5">
       <label
         htmlFor={htmlFor}
-        className="block text-[15px] font-medium text-zinc-800"
+        className="block text-sm font-medium text-[#18181b]"
       >
         {label}
       </label>
-      {hint ? <p className="text-sm text-zinc-500">{hint}</p> : null}
+      {hint ? <p className="text-sm text-[#71717a]">{hint}</p> : null}
       {children}
       {error ? <p className="text-sm text-red-600">{error}</p> : null}
     </div>
   );
 }
 
-const inputBase =
-  "w-full rounded border bg-white py-3 text-base text-zinc-900 outline-none";
+const inputShell =
+  "h-12 w-full rounded-lg border bg-white text-base text-[#18181b] outline-none";
 
 export function NumberInput({
   className = "",
@@ -46,10 +51,10 @@ export function NumberInput({
     <input
       type="number"
       inputMode="decimal"
-      className={`${inputBase} px-3 ${
+      className={`${inputShell} px-3 ${
         invalid
-          ? "border-red-500 focus:border-red-600"
-          : "border-zinc-300 focus:border-zinc-500"
+          ? `border-red-500 ${focusRingInvalid}`
+          : `border-[#e4e4e7] ${focusRing}`
       } ${className}`}
       {...props}
     />
@@ -63,10 +68,10 @@ export function TextInput({
 }: InputHTMLAttributes<HTMLInputElement> & { invalid?: boolean }) {
   return (
     <input
-      className={`${inputBase} px-3 ${
+      className={`${inputShell} px-3 ${
         invalid
-          ? "border-red-500 focus:border-red-600"
-          : "border-zinc-300 focus:border-zinc-500"
+          ? `border-red-500 ${focusRingInvalid}`
+          : `border-[#e4e4e7] ${focusRing}`
       } ${className}`}
       {...props}
     />
@@ -80,17 +85,17 @@ export function SelectInput({
 }: SelectHTMLAttributes<HTMLSelectElement> & { invalid?: boolean }) {
   return (
     <select
-      className={`${inputBase} px-3 ${
+      className={`${inputShell} px-3 ${
         invalid
-          ? "border-red-500 focus:border-red-600"
-          : "border-zinc-300 focus:border-zinc-500"
+          ? `border-red-500 ${focusRingInvalid}`
+          : `border-[#e4e4e7] ${focusRing}`
       } ${className}`}
       {...props}
     />
   );
 }
 
-/** Number field with unit on the right inside the control. */
+/** Number field with unit on the right inside the control. 48px tall. */
 export function UnitInput({
   id,
   value,
@@ -112,10 +117,10 @@ export function UnitInput({
 }) {
   return (
     <div
-      className={`flex items-stretch overflow-hidden rounded border bg-white ${
+      className={`flex h-12 items-stretch overflow-hidden rounded-lg border bg-white ${
         invalid
-          ? "border-red-500 focus-within:border-red-600"
-          : "border-zinc-300 focus-within:border-zinc-500"
+          ? `border-red-500 ${focusRingInvalid}`
+          : `border-[#e4e4e7] ${focusRing}`
       }`}
     >
       <input
@@ -126,16 +131,15 @@ export function UnitInput({
         step={step}
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="min-w-0 flex-1 border-0 bg-transparent py-3 pl-3 pr-2 text-base text-zinc-900 outline-none"
+        className="min-w-0 flex-1 border-0 bg-transparent px-3 text-base text-[#18181b] outline-none"
       />
-      <span className="flex shrink-0 items-center pr-3 text-sm text-zinc-500">
+      <span className="flex shrink-0 items-center pr-3 text-sm text-[#71717a]">
         {unit}
       </span>
     </div>
   );
 }
 
-/** Compact feet / inches toggle — use only where both units are common. */
 export function UnitToggle({
   value,
   onChange,
@@ -149,17 +153,17 @@ export function UnitToggle({
     <div
       role="group"
       aria-label={label}
-      className="inline-flex rounded border border-zinc-300 bg-white p-0.5"
+      className="inline-flex h-12 items-center rounded-lg border border-[#e4e4e7] bg-white p-1"
     >
       {(["ft", "in"] as const).map((u) => (
         <button
           key={u}
           type="button"
           onClick={() => onChange(u)}
-          className={`rounded px-3 py-1.5 text-sm font-medium ${
+          className={`h-full rounded-md px-3 text-sm font-medium ${
             value === u
-              ? "bg-zinc-700 text-white"
-              : "text-zinc-600 hover:text-zinc-900"
+              ? "bg-[#3f3f46] text-white"
+              : "text-[#71717a] hover:text-[#18181b]"
           }`}
         >
           {u}
@@ -179,20 +183,28 @@ export function ResultCard({
   breakdown?: string;
 }) {
   return (
-    <div className="rounded border border-zinc-200 bg-white px-4 py-5 text-center shadow-sm">
-      <p className="text-4xl font-semibold tracking-tight text-zinc-900 tabular-nums">
+    <div className="rounded-2xl border border-[#e4e4e7] bg-white px-5 py-6 text-center">
+      <p
+        className="font-semibold tracking-tight text-[#18181b] tabular-nums"
+        style={{ fontSize: 40, lineHeight: 1.1 }}
+      >
         {value}
       </p>
-      <p className="mt-1 text-base text-zinc-500">{unit}</p>
+      <p className="mt-1.5 text-base text-[#71717a]">{unit}</p>
       {breakdown ? (
-        <p className="mt-3 text-sm text-zinc-600">{breakdown}</p>
+        <p className="mt-3 text-sm leading-snug text-[#71717a]">{breakdown}</p>
       ) : null}
     </div>
   );
 }
 
+/** White form card: 16px radius, 1px border. */
 export function CalcForm({ children }: { children: ReactNode }) {
-  return <div className="space-y-4">{children}</div>;
+  return (
+    <div className="space-y-4 rounded-2xl border border-[#e4e4e7] bg-white p-4 sm:p-5">
+      {children}
+    </div>
+  );
 }
 
 export function Button({
@@ -208,7 +220,7 @@ export function Button({
     <button
       type={type}
       onClick={onClick}
-      className="rounded border border-zinc-300 bg-white px-3 py-2 text-sm font-medium text-zinc-800 hover:bg-zinc-50"
+      className="h-12 rounded-lg border border-[#e4e4e7] bg-white px-4 text-sm font-medium text-[#18181b] hover:bg-[#f4f4f5]"
     >
       {children}
     </button>

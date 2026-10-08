@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
-import { CALCULATORS, SITE_NAME, SITE_TAGLINE } from "@/lib/site";
+import { CALCULATORS, SITE_NAME } from "@/lib/site";
 
 export const metadata = pageMetadata({
   title: `${SITE_NAME} — Free Calculators`,
@@ -11,25 +11,35 @@ export const metadata = pageMetadata({
 
 export default function HomePage() {
   return (
-    <div className="mx-auto w-full max-w-[640px] px-4 py-8">
-      <h1 className="text-2xl font-semibold tracking-tight text-zinc-900">
-        {SITE_NAME}
+    <div className="mx-auto w-full max-w-[640px] px-4 py-10">
+      <h1 className="text-2xl font-semibold tracking-tight text-[#18181b] sm:text-3xl">
+        Free calculators for real jobs.
       </h1>
-      <p className="mt-2 text-[15px] text-zinc-600">{SITE_TAGLINE}</p>
+      <p className="mt-3 max-w-md text-[15px] leading-relaxed text-[#71717a]">
+        Pick a tool, enter the numbers, get the answer. No account needed.
+      </p>
 
-      <section id="calculators" className="mt-8 scroll-mt-16">
-        <ul className="divide-y divide-zinc-200 border-t border-b border-zinc-200">
+      <section id="calculators" className="mt-10 scroll-mt-20">
+        <ul className="border-t border-[#e4e4e7]">
           {CALCULATORS.map((c) => (
-            <li key={c.slug}>
+            <li key={c.slug} className="border-b border-[#e4e4e7]">
               <Link
                 href={`/${c.slug}`}
-                className="block py-3 hover:bg-zinc-50/80"
+                className="flex items-center gap-3 px-1 py-4 hover:bg-[#e4e4e7]/40"
               >
-                <span className="text-[15px] font-medium text-zinc-900">
-                  {c.title}
+                <span className="min-w-0 flex-1">
+                  <span className="block text-[15px] font-medium text-[#18181b]">
+                    {c.title}
+                  </span>
+                  <span className="mt-0.5 block text-sm text-[#71717a]">
+                    {c.description}
+                  </span>
                 </span>
-                <span className="mt-0.5 block text-sm text-zinc-500">
-                  {c.description}
+                <span
+                  aria-hidden="true"
+                  className="shrink-0 text-lg text-[#a1a1aa]"
+                >
+                  →
                 </span>
               </Link>
             </li>
