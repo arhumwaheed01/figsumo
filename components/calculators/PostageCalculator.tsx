@@ -55,7 +55,9 @@ export function PostageCalculator() {
   const weightBad = !isPositive(weight);
 
   const result = useMemo(() => {
-    if (weightBad) return { price: null as number | null, note: null as string | null };
+    if (weightBad) {
+      return { price: null as number | null, note: null as string | null };
+    }
     const w = Number(weight);
 
     if (mailType === "letter") {
@@ -100,6 +102,7 @@ export function PostageCalculator() {
             id="postage-type"
             value={mailType}
             onChange={(e) => setMailType(e.target.value as "letter" | "flat")}
+            className="max-w-xs"
           >
             <option value="letter">Letter</option>
             <option value="flat">Large envelope (flat)</option>
@@ -111,7 +114,7 @@ export function PostageCalculator() {
         <ResultCard
           value={money(result.price)}
           unit="guide rate"
-          breakdown={`Domestic US ${mailType === "letter" ? "letter" : "flat"} guide — confirm at usps.com.`}
+          breakdown={`Domestic US ${mailType === "letter" ? "letter" : "flat"} — confirm at usps.com.`}
         />
       ) : (
         <ResultCard

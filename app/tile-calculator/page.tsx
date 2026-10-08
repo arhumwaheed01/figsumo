@@ -4,13 +4,12 @@ import { pageMetadata } from "@/lib/seo";
 import { getCalculator } from "@/lib/site";
 
 const calc = getCalculator("tile-calculator")!;
-const heading = "Tile Calculator — Room Tiles + Waste";
-const description =
-  "Count tiles for a room with tile size, grout gap, and 10% waste. Free tile calculator, no signup.";
+const intro =
+  "Estimates how many tiles you need for a rectangular room, including grout gap and 10% waste.";
 
 export const metadata = pageMetadata({
-  title: `${heading} | Figsumo`,
-  description,
+  title: "Tile Calculator",
+  description: intro,
   path: "/tile-calculator",
 });
 
@@ -18,24 +17,22 @@ export default function Page() {
   return (
     <CalculatorShell
       calc={calc}
-      heading={heading}
-      intro="Enter room size, tile size, and grout gap. Includes 10% waste."
-      metaDescription={description}
+      intro={intro}
       faqs={[
         {
           question: "Why add 10% waste?",
           answer:
-            "Cuts, breakage, and matching patterns use extra tile. Straight layouts often need about 10%; diagonals need more.",
+            "Cuts, breakage, and pattern matching use extra tile. Straight layouts often need about 10%.",
         },
         {
-          question: "What if my tiles are rectangular, not square?",
+          question: "What if my tiles are not square?",
           answer:
-            "Enter the size that runs along each direction carefully, or calculate each axis with the matching tile edge length.",
+            "Use the edge length that runs along each room direction, or calculate each axis with the matching tile size.",
         },
         {
-          question: "Does grout gap really change the count?",
+          question: "Does grout gap change the count?",
           answer:
-            "Yes. Each joint adds to the spacing. Over a large floor, even 1/8 inch shifts how many tiles fit along a wall.",
+            "Yes. Each joint adds spacing. Over a large floor, even 1/8 inch changes how many tiles fit.",
         },
       ]}
     >

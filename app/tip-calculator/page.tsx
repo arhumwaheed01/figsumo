@@ -4,13 +4,12 @@ import { pageMetadata } from "@/lib/seo";
 import { getCalculator } from "@/lib/site";
 
 const calc = getCalculator("tip-calculator")!;
-const heading = "Tip Calculator — Bill Split & Tip";
-const description =
-  "Calculate tip and split the bill across people with 15–25% presets. Free tip calculator, no signup.";
+const intro =
+  "Estimates tip, total bill, and the amount each person pays when you split evenly.";
 
 export const metadata = pageMetadata({
-  title: `${heading} | Figsumo`,
-  description,
+  title: "Tip Calculator",
+  description: intro,
   path: "/tip-calculator",
 });
 
@@ -18,17 +17,15 @@ export default function Page() {
   return (
     <CalculatorShell
       calc={calc}
-      heading={heading}
-      intro="Enter the bill, tip percent, and how many people split it."
-      metaDescription={description}
+      intro={intro}
       faqs={[
         {
           question: "Should I tip on pre-tax or post-tax?",
           answer:
-            "Either is common. Many people tip on the pre-tax subtotal; others tip on the total. Use whichever you prefer.",
+            "Either is common. Many people tip on the pre-tax subtotal; others tip on the total.",
         },
         {
-          question: "What if the restaurant added a service charge?",
+          question: "What if there is a service charge?",
           answer:
             "A mandatory service charge is not the same as a tip. Check the receipt before adding more.",
         },

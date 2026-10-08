@@ -4,13 +4,12 @@ import { pageMetadata } from "@/lib/seo";
 import { getCalculator } from "@/lib/site";
 
 const calc = getCalculator("paint-calculator")!;
-const heading = "Paint Calculator — Gallons for One Wall";
-const description =
-  "Estimate paint gallons for one wall from size, coats, doors, and windows. Free, no signup.";
+const intro =
+  "Estimates how many gallons of paint you need for one wall from length, height, coats, coverage, and openings.";
 
 export const metadata = pageMetadata({
-  title: `${heading} | Figsumo`,
-  description,
+  title: "Paint Calculator",
+  description: intro,
   path: "/paint-calculator",
 });
 
@@ -18,24 +17,22 @@ export default function Page() {
   return (
     <CalculatorShell
       calc={calc}
-      heading={heading}
-      intro="Enter wall size, coats, coverage, and any doors or windows to subtract."
-      metaDescription={description}
+      intro={intro}
       faqs={[
         {
           question: "How do I paint a whole room?",
           answer:
-            "Use the room perimeter as wall length (sum of all walls), keep the ceiling height, and subtract all doors and windows once.",
+            "Use the room perimeter as wall length, keep the ceiling height, and subtract all doors and windows once.",
         },
         {
           question: "What coverage should I use?",
           answer:
-            "Start with the number on the paint can. 350 sq ft per gallon is a common interior estimate; textured walls need more.",
+            "Use the number on the paint can. 350 sq ft per gallon is a common interior default; textured walls need more.",
         },
         {
           question: "Do I need primer in this total?",
           answer:
-            "No. Primer is separate. If you are priming, run the calculator again for one coat of primer, or follow the primer label.",
+            "No. Primer is separate. Run the calculator again for one coat of primer if you need it.",
         },
       ]}
     >

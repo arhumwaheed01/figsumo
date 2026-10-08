@@ -33,9 +33,7 @@ export function ConcreteCalculator() {
       return { cubicYards: null as number | null, bags: null as number | null };
     }
     const cuFt =
-      Number(length) *
-      Number(width) *
-      toFeet(Number(depth), depthUnit);
+      Number(length) * Number(width) * toFeet(Number(depth), depthUnit);
     const yd = cuFt / 27;
     return { cubicYards: yd, bags: Math.ceil(yd * 45) };
   }, [anyBad, length, width, depth, depthUnit]);
@@ -77,17 +75,15 @@ export function ConcreteCalculator() {
           hint="Slabs are often measured in inches."
           error={depthBad ? ERR_GT_ZERO : null}
         >
-          <div className="flex gap-2">
-            <div className="min-w-0 flex-1">
-              <UnitInput
-                id="concrete-depth"
-                value={depth}
-                onChange={setDepth}
-                unit={depthUnit}
-                invalid={depthBad}
-                min={0}
-              />
-            </div>
+          <div className="flex flex-wrap items-center gap-2">
+            <UnitInput
+              id="concrete-depth"
+              value={depth}
+              onChange={setDepth}
+              unit=""
+              invalid={depthBad}
+              min={0}
+            />
             <UnitToggle
               value={depthUnit}
               onChange={setDepthUnit}

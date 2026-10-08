@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 import { CALCULATORS, SITE_URL } from "@/lib/site";
 
-/** Only figsumo.com URLs: home, eight calculators, about, privacy, contact. */
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages = [
     { path: "", priority: 1 },

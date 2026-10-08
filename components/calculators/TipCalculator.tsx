@@ -55,30 +55,28 @@ export function TipCalculator() {
             step="0.01"
           />
         </Field>
-
-        <div className="space-y-1">
-          <p className="text-[15px] font-medium text-zinc-800">Tip percent</p>
-          <div className="flex flex-wrap gap-2">
-            {PRESETS.map((p) => (
-              <button
-                key={p}
-                type="button"
-                onClick={() => setPercent(String(p))}
-                className={`h-12 min-w-[3.25rem] rounded-lg border px-3 text-sm font-medium ${
-                  Number(percent) === p
-                    ? "border-[#3f3f46] bg-[#3f3f46] text-white"
-                    : "border-[#e4e4e7] bg-white text-[#18181b]"
-                }`}
-              >
-                {p}%
-              </button>
-            ))}
-          </div>
-          <Field
-            label="Or enter a tip percent"
-            htmlFor="tip-percent"
-            error={percentBad ? ERR_GT_ZERO : null}
-          >
+        <Field
+          label="Tip percent"
+          htmlFor="tip-percent"
+          error={percentBad ? ERR_GT_ZERO : null}
+        >
+          <div className="space-y-2">
+            <div className="flex flex-wrap gap-2">
+              {PRESETS.map((p) => (
+                <button
+                  key={p}
+                  type="button"
+                  onClick={() => setPercent(String(p))}
+                  className={`h-9 min-w-[3rem] rounded border px-2 text-sm font-medium ${
+                    Number(percent) === p
+                      ? "border-[#3f3f46] bg-[#3f3f46] text-white"
+                      : "border-[#e4e4e7] bg-white text-[#18181b]"
+                  }`}
+                >
+                  {p}%
+                </button>
+              ))}
+            </div>
             <UnitInput
               id="tip-percent"
               value={percent}
@@ -88,9 +86,8 @@ export function TipCalculator() {
               min={0}
               step="0.5"
             />
-          </Field>
-        </div>
-
+          </div>
+        </Field>
         <Field
           label="Split between"
           htmlFor="tip-people"

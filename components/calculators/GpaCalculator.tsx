@@ -85,58 +85,59 @@ export function GpaCalculator() {
     <div className="space-y-4">
       <CalcForm>
         {rows.map((row, index) => (
-          <div key={row.id} className="space-y-3 border-b border-zinc-200 pb-4">
+          <div key={row.id} className="border-b border-[#e4e4e7] last:border-b-0">
             <Field label="Course name" htmlFor={`gpa-c-${row.id}`}>
               <TextInput
                 id={`gpa-c-${row.id}`}
                 value={row.course}
                 placeholder={`Course ${index + 1}`}
                 onChange={(e) => updateRow(row.id, { course: e.target.value })}
+                className="max-w-xs"
               />
             </Field>
-            <div className="grid grid-cols-2 gap-3">
-              <Field
-                label="Credits"
-                htmlFor={`gpa-cr-${row.id}`}
-                error={creditErrors[index] ? ERR_GT_ZERO : null}
+            <Field
+              label="Credits"
+              htmlFor={`gpa-cr-${row.id}`}
+              error={creditErrors[index] ? ERR_GT_ZERO : null}
+            >
+              <UnitInput
+                id={`gpa-cr-${row.id}`}
+                value={row.credits}
+                onChange={(v) => updateRow(row.id, { credits: v })}
+                unit="cr"
+                invalid={creditErrors[index]}
+                min={0}
+                step="0.5"
+              />
+            </Field>
+            <Field label="Letter grade" htmlFor={`gpa-g-${row.id}`}>
+              <SelectInput
+                id={`gpa-g-${row.id}`}
+                value={row.grade}
+                onChange={(e) => updateRow(row.id, { grade: e.target.value })}
+                className="max-w-[6rem]"
               >
-                <UnitInput
-                  id={`gpa-cr-${row.id}`}
-                  value={row.credits}
-                  onChange={(v) => updateRow(row.id, { credits: v })}
-                  unit="cr"
-                  invalid={creditErrors[index]}
-                  min={0}
-                  step="0.5"
-                />
-              </Field>
-              <Field label="Letter grade" htmlFor={`gpa-g-${row.id}`}>
-                <SelectInput
-                  id={`gpa-g-${row.id}`}
-                  value={row.grade}
-                  onChange={(e) => updateRow(row.id, { grade: e.target.value })}
-                >
-                  {Object.keys(GRADE_POINTS).map((g) => (
-                    <option key={g} value={g}>
-                      {g}
-                    </option>
-                  ))}
-                </SelectInput>
-              </Field>
-            </div>
+                {Object.keys(GRADE_POINTS).map((g) => (
+                  <option key={g} value={g}>
+                    {g}
+                  </option>
+                ))}
+              </SelectInput>
+            </Field>
             {rows.length > 1 ? (
-              <button
-                type="button"
-                onClick={() => removeRow(row.id)}
-                className="text-sm text-zinc-500 underline-offset-2 hover:text-zinc-800 hover:underline"
-              >
-                Remove course
-              </button>
+              <div className="pb-3 sm:pl-[calc(11rem+1rem)]">
+                <button
+                  type="button"
+                  onClick={() => removeRow(row.id)}
+                  className="text-sm text-[#71717a] underline-offset-2 hover:underline"
+                >
+                  Remove course
+                </button>
+              </div>
             ) : null}
           </div>
         ))}
-
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 py-3">
           <Button onClick={addRow}>Add course</Button>
           <Button onClick={reset}>Reset</Button>
         </div>
@@ -146,7 +147,7 @@ export function GpaCalculator() {
         <ResultCard
           value={result.gpa.toFixed(2)}
           unit="GPA"
-          breakdown={`${result.totalCredits} credits on a 4.0 scale`}
+          breakdown={`${result.totalCredits} credits on a 4.0 scale.`}
         />
       ) : (
         <ResultCard value="—" unit="GPA" />

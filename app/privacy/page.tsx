@@ -2,9 +2,9 @@ import { pageMetadata } from "@/lib/seo";
 import { CONTACT_EMAIL, SITE_NAME } from "@/lib/site";
 
 export const metadata = pageMetadata({
-  title: "Privacy | Figsumo",
+  title: "Privacy",
   description:
-    "Figsumo has no accounts and does not save calculator inputs. Free tools, no signup.",
+    "Figsumo has no accounts and does not save calculator inputs. Free tools in your browser.",
   path: "/privacy",
 });
 
@@ -14,7 +14,7 @@ export default function PrivacyPage() {
       <h1 className="text-2xl font-semibold tracking-tight text-[#18181b]">
         Privacy
       </h1>
-      <div className="mt-6 space-y-4 text-base leading-relaxed text-[#3f3f46]">
+      <div className="mt-4 space-y-4 text-[15px] leading-relaxed text-[#3f3f46]">
         <p>
           {SITE_NAME} does not require an account. Calculator inputs are handled
           in your browser and are not saved on our servers.

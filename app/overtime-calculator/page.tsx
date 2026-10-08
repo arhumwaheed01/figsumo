@@ -4,13 +4,12 @@ import { pageMetadata } from "@/lib/seo";
 import { getCalculator } from "@/lib/site";
 
 const calc = getCalculator("overtime-calculator")!;
-const heading = "Overtime Calculator — Hourly Pay Estimate";
-const description =
-  "Estimate regular pay, overtime at 1.5×, and total from your hourly rate. Free, no signup.";
+const intro =
+  "Estimates regular pay, overtime pay, and total from an hourly rate. US-style estimate only.";
 
 export const metadata = pageMetadata({
-  title: `${heading} | Figsumo`,
-  description,
+  title: "Overtime Calculator",
+  description: intro,
   path: "/overtime-calculator",
 });
 
@@ -18,24 +17,22 @@ export default function Page() {
   return (
     <CalculatorShell
       calc={calc}
-      heading={heading}
-      intro="Enter hourly rate, regular hours, overtime hours, and the overtime multiplier."
-      metaDescription={description}
+      intro={intro}
       faqs={[
         {
           question: "Is overtime always 1.5 times pay?",
           answer:
-            "Under the US Fair Labor Standards Act, many non-exempt hourly workers get 1.5× after 40 hours in a workweek. Some states or contracts use different rules.",
+            "Many non-exempt US hourly workers get 1.5× after 40 hours in a workweek. Some states use different rules.",
         },
         {
           question: "Does this include taxes?",
           answer:
-            "No. The result is gross pay before taxes, benefits, and other deductions.",
+            "No. The result is gross pay before taxes and deductions.",
         },
         {
           question: "What about salaried workers?",
           answer:
-            "Many salaried employees are exempt from overtime. This tool is aimed at hourly estimates, not exemption tests.",
+            "Many salaried employees are exempt from overtime. This tool is for hourly estimates.",
         },
       ]}
     >

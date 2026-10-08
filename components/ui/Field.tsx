@@ -7,10 +7,11 @@ import type {
 export const ERR_GT_ZERO = "Enter a number greater than 0.";
 
 const focusRing =
-  "focus-within:border-[#3f3f46] focus-within:ring-2 focus-within:ring-[#3f3f46]/30";
+  "focus:border-[#3f3f46] focus:ring-2 focus:ring-[#3f3f46]/30";
 const focusRingInvalid =
-  "focus-within:border-red-500 focus-within:ring-2 focus-within:ring-red-500/30";
+  "focus:border-red-500 focus:ring-2 focus:ring-red-500/30";
 
+/** Label left, control right — calculator.net-style row. */
 export function Field({
   label,
   htmlFor,
@@ -25,22 +26,32 @@ export function Field({
   error?: string | null;
 }) {
   return (
-    <div className="space-y-1.5">
-      <label
-        htmlFor={htmlFor}
-        className="block text-sm font-medium text-[#18181b]"
-      >
-        {label}
-      </label>
-      {hint ? <p className="text-sm text-[#71717a]">{hint}</p> : null}
-      {children}
-      {error ? <p className="text-sm text-red-600">{error}</p> : null}
+    <div className="border-b border-[#e4e4e7] py-3 last:border-b-0">
+      <div className="grid grid-cols-1 items-center gap-2 sm:grid-cols-[minmax(0,11rem)_minmax(0,1fr)] sm:gap-4">
+        <div>
+          <label
+            htmlFor={htmlFor}
+            className="text-sm font-medium text-[#18181b]"
+          >
+            {label}
+          </label>
+          {hint ? (
+            <p className="mt-0.5 text-xs text-[#71717a]">{hint}</p>
+          ) : null}
+        </div>
+        <div>{children}</div>
+      </div>
+      {error ? (
+        <p className="mt-1 text-sm text-red-600 sm:pl-[calc(11rem+1rem)]">
+          {error}
+        </p>
+      ) : null}
     </div>
   );
 }
 
 const inputShell =
-  "h-12 w-full rounded-lg border bg-white text-base text-[#18181b] outline-none";
+  "h-11 w-full min-w-0 rounded border bg-white px-3 text-base text-[#18181b] outline-none";
 
 export function NumberInput({
   className = "",
@@ -51,7 +62,7 @@ export function NumberInput({
     <input
       type="number"
       inputMode="decimal"
-      className={`${inputShell} px-3 ${
+      className={`${inputShell} ${
         invalid
           ? `border-red-500 ${focusRingInvalid}`
           : `border-[#e4e4e7] ${focusRing}`
@@ -68,7 +79,7 @@ export function TextInput({
 }: InputHTMLAttributes<HTMLInputElement> & { invalid?: boolean }) {
   return (
     <input
-      className={`${inputShell} px-3 ${
+      className={`${inputShell} ${
         invalid
           ? `border-red-500 ${focusRingInvalid}`
           : `border-[#e4e4e7] ${focusRing}`
@@ -85,7 +96,7 @@ export function SelectInput({
 }: SelectHTMLAttributes<HTMLSelectElement> & { invalid?: boolean }) {
   return (
     <select
-      className={`${inputShell} px-3 ${
+      className={`${inputShell} ${
         invalid
           ? `border-red-500 ${focusRingInvalid}`
           : `border-[#e4e4e7] ${focusRing}`
@@ -95,7 +106,7 @@ export function SelectInput({
   );
 }
 
-/** Number field with unit on the right inside the control. 48px tall. */
+/** Input with unit text immediately to the right of the field. */
 export function UnitInput({
   id,
   value,
@@ -116,13 +127,7 @@ export function UnitInput({
   inputMode?: "decimal" | "numeric";
 }) {
   return (
-    <div
-      className={`flex h-12 items-stretch overflow-hidden rounded-lg border bg-white ${
-        invalid
-          ? `border-red-500 ${focusRingInvalid}`
-          : `border-[#e4e4e7] ${focusRing}`
-      }`}
-    >
+    <div className="flex items-center gap-2">
       <input
         id={id}
         type="number"
@@ -131,11 +136,15 @@ export function UnitInput({
         step={step}
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="min-w-0 flex-1 border-0 bg-transparent px-3 text-base text-[#18181b] outline-none"
+        className={`${inputShell} max-w-[12rem] flex-1 ${
+          invalid
+            ? `border-red-500 ${focusRingInvalid}`
+            : `border-[#e4e4e7] ${focusRing}`
+        }`}
       />
-      <span className="flex shrink-0 items-center pr-3 text-sm text-[#71717a]">
-        {unit}
-      </span>
+      {unit ? (
+        <span className="shrink-0 text-sm text-[#71717a]">{unit}</span>
+      ) : null}
     </div>
   );
 }
@@ -153,14 +162,14 @@ export function UnitToggle({
     <div
       role="group"
       aria-label={label}
-      className="inline-flex h-12 items-center rounded-lg border border-[#e4e4e7] bg-white p-1"
+      className="inline-flex h-11 items-center rounded border border-[#e4e4e7] bg-white p-0.5"
     >
       {(["ft", "in"] as const).map((u) => (
         <button
           key={u}
           type="button"
           onClick={() => onChange(u)}
-          className={`h-full rounded-md px-3 text-sm font-medium ${
+          className={`h-full rounded px-3 text-sm font-medium ${
             value === u
               ? "bg-[#3f3f46] text-white"
               : "text-[#71717a] hover:text-[#18181b]"
@@ -173,6 +182,7 @@ export function UnitToggle({
   );
 }
 
+/** Simple bordered result box — large number first. */
 export function ResultCard({
   value,
   unit,
@@ -183,25 +193,21 @@ export function ResultCard({
   breakdown?: string;
 }) {
   return (
-    <div className="rounded-2xl border border-[#e4e4e7] bg-white px-5 py-6 text-center">
-      <p
-        className="font-semibold tracking-tight text-[#18181b] tabular-nums"
-        style={{ fontSize: 40, lineHeight: 1.1 }}
-      >
+    <div className="border border-[#e4e4e7] bg-white px-4 py-5">
+      <p className="text-4xl font-semibold tracking-tight text-[#18181b] tabular-nums">
         {value}
       </p>
-      <p className="mt-1.5 text-base text-[#71717a]">{unit}</p>
+      <p className="mt-1 text-sm text-[#71717a]">{unit}</p>
       {breakdown ? (
-        <p className="mt-3 text-sm leading-snug text-[#71717a]">{breakdown}</p>
+        <p className="mt-2 text-sm text-[#71717a]">{breakdown}</p>
       ) : null}
     </div>
   );
 }
 
-/** White form card: 16px radius, 1px border. */
 export function CalcForm({ children }: { children: ReactNode }) {
   return (
-    <div className="space-y-4 rounded-2xl border border-[#e4e4e7] bg-white p-4 sm:p-5">
+    <div className="border border-[#e4e4e7] bg-white px-3 sm:px-4">
       {children}
     </div>
   );
@@ -220,7 +226,7 @@ export function Button({
     <button
       type={type}
       onClick={onClick}
-      className="h-12 rounded-lg border border-[#e4e4e7] bg-white px-4 text-sm font-medium text-[#18181b] hover:bg-[#f4f4f5]"
+      className="h-11 rounded border border-[#e4e4e7] bg-white px-3 text-sm font-medium text-[#18181b] hover:bg-[#f4f4f5]"
     >
       {children}
     </button>

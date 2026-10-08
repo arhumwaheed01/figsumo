@@ -3,7 +3,7 @@ import { SITE_NAME, SITE_URL } from "./site";
 
 export type FaqItem = { question: string; answer: string };
 
-/** Absolute page title (already includes | Figsumo when needed). */
+/** Title is H1 + " - Figsumo". Description is the intro sentence. */
 export function pageMetadata({
   title,
   description,
@@ -14,13 +14,15 @@ export function pageMetadata({
   path: string;
 }): Metadata {
   const url = path === "/" ? SITE_URL : `${SITE_URL}${path}`;
+  const fullTitle =
+    path === "/" ? title : title.includes(" - Figsumo") ? title : `${title} - Figsumo`;
 
   return {
-    title: { absolute: title },
+    title: { absolute: fullTitle },
     description,
     alternates: { canonical: url },
     openGraph: {
-      title,
+      title: fullTitle,
       description,
       url,
       siteName: SITE_NAME,
@@ -29,7 +31,7 @@ export function pageMetadata({
     },
     twitter: {
       card: "summary",
-      title,
+      title: fullTitle,
       description,
     },
   };
@@ -54,7 +56,6 @@ export function webApplicationJsonLd({
     url: `${SITE_URL}${path}`,
     applicationCategory: "UtilityApplication",
     operatingSystem: "Any",
-    browserRequirements: "Requires JavaScript",
     offers: {
       "@type": "Offer",
       price: "0",

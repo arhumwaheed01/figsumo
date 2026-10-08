@@ -81,6 +81,7 @@ export function AgeCalculator() {
             value={birth}
             invalid={birthBad}
             onChange={(e) => setBirth(e.target.value)}
+            className="max-w-[14rem]"
           />
         </Field>
         <Field
@@ -101,6 +102,7 @@ export function AgeCalculator() {
             value={end}
             invalid={endBad || orderBad}
             onChange={(e) => setEnd(e.target.value)}
+            className="max-w-[14rem]"
           />
         </Field>
       </CalcForm>
