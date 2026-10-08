@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Figsumo
 
-## Getting Started
+Free calculators for jobs people actually search. Live at [figsumo.com](https://figsumo.com).
 
-First, run the development server:
+No accounts, no database, no CMS. All math runs in the browser. Each calculator page ships HTML with the formula, example, and FAQ so search engines can read it without JavaScript.
+
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run build
+npm start
+```
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npx vercel --prod
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Or connect the GitHub repo in the Vercel dashboard and deploy on push. Framework preset: Next.js. No environment variables required.
+
+## Add a calculator
+
+1. Add an entry to `CALCULATORS` in `lib/site.ts` (slug, title, description, group, formula, example, whenWrong).
+2. Create a client component in `components/calculators/YourCalculator.tsx` with `"use client"`, sensible defaults, and a live result.
+3. Create `app/your-slug/page.tsx` that exports metadata via `pageMetadata`, wraps the tool in `CalculatorShell`, and includes three FAQ items.
+4. The home page, footer, and `app/sitemap.ts` pick up the new entry from `CALCULATORS` automatically.
+
+Keep the interactive form in a client component. Keep the H1, formula, example, “when this is wrong,” and FAQ in the server-rendered `CalculatorShell` so they appear in the HTML without waiting on JS.
+
+## Stack
+
+- Next.js App Router + TypeScript
+- Tailwind CSS v4
+- No UI library, no AdSense yet (empty “Ad” slot under each result)
+
+## Calculators
+
+Concrete, paint, tile, overtime, age, GPA, postage, tip.
