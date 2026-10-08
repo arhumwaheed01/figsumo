@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+import { BasicCalculator } from "@/components/BasicCalculator";
 import { HomeDirectory } from "@/components/HomeDirectory";
 import { pageMetadata } from "@/lib/seo";
 
@@ -15,10 +17,20 @@ export default function HomePage() {
         Free online calculators.
       </h1>
       <p className="mt-2 text-[15px] text-[#71717a]">
-        Choose a calculator below. All math runs in your browser.
+        Use the basic calculator, or pick a tool below. All math runs in your
+        browser.
       </p>
+
       <div className="mt-6">
-        <HomeDirectory />
+        <Suspense fallback={<div className="border border-[#e4e4e7] p-4">Loading…</div>}>
+          <BasicCalculator />
+        </Suspense>
+      </div>
+
+      <div className="mt-10">
+        <Suspense fallback={null}>
+          <HomeDirectory />
+        </Suspense>
       </div>
     </div>
   );

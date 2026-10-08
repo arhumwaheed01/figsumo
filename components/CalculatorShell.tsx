@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { ReactNode } from "react";
+import { Suspense, type ReactNode } from "react";
 import {
   faqPageJsonLd,
   jsonLdScript,
@@ -14,6 +14,14 @@ type CalculatorShellProps = {
   faqs: FaqItem[];
   children: ReactNode;
 };
+
+function FormFallback() {
+  return (
+    <div className="border border-[#e4e4e7] bg-white px-4 py-8 text-sm text-[#71717a]">
+      Loading calculator…
+    </div>
+  );
+}
 
 export function CalculatorShell({
   calc,
@@ -47,8 +55,9 @@ export function CalculatorShell({
       </h1>
       <p className="mt-2 text-[15px] leading-relaxed text-[#71717a]">{intro}</p>
 
-      {/* Form + result first — before any long text */}
-      <div className="mt-5">{children}</div>
+      <div className="mt-5">
+        <Suspense fallback={<FormFallback />}>{children}</Suspense>
+      </div>
 
       <section className="mt-10">
         <h2 className="text-lg font-semibold text-[#18181b]">How it works</h2>

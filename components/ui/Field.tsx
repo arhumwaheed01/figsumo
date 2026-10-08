@@ -1,3 +1,5 @@
+"use client";
+
 import type {
   InputHTMLAttributes,
   ReactNode,
@@ -11,7 +13,7 @@ const focusRing =
 const focusRingInvalid =
   "focus:border-red-500 focus:ring-2 focus:ring-red-500/30";
 
-/** Label left, control right — calculator.net-style row. */
+/** Label left, control right. */
 export function Field({
   label,
   htmlFor,
@@ -106,7 +108,7 @@ export function SelectInput({
   );
 }
 
-/** Input with unit text immediately to the right of the field. */
+/** Input with unit text beside the field. */
 export function UnitInput({
   id,
   value,
@@ -130,6 +132,7 @@ export function UnitInput({
     <div className="flex items-center gap-2">
       <input
         id={id}
+        name={id}
         type="number"
         inputMode={inputMode}
         min={min}
@@ -182,7 +185,6 @@ export function UnitToggle({
   );
 }
 
-/** Simple bordered result box — large number first. */
 export function ResultCard({
   value,
   unit,
@@ -207,9 +209,12 @@ export function ResultCard({
 
 export function CalcForm({ children }: { children: ReactNode }) {
   return (
-    <div className="border border-[#e4e4e7] bg-white px-3 sm:px-4">
+    <form
+      className="border border-[#e4e4e7] bg-white px-3 sm:px-4"
+      onSubmit={(e) => e.preventDefault()}
+    >
       {children}
-    </div>
+    </form>
   );
 }
 
