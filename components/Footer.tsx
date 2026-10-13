@@ -1,34 +1,70 @@
 import Link from "next/link";
-import { CALCULATORS } from "@/lib/site";
+import { Logo } from "./Logo";
+import { calculatorCategories } from "@/lib/calculators";
 
 export function Footer() {
   return (
-    <footer className="mt-auto border-t border-[#e4e4e7] bg-[#f4f4f5]">
-      <div className="mx-auto max-w-[640px] px-4 py-8 text-sm text-[#71717a]">
-        <nav className="flex flex-wrap gap-x-4 gap-y-1">
-          <Link href="/about" className="hover:text-[#18181b]">
-            About
-          </Link>
-          <Link href="/privacy" className="hover:text-[#18181b]">
-            Privacy
-          </Link>
-          <Link href="/contact" className="hover:text-[#18181b]">
-            Contact
-          </Link>
+    <footer className="mt-auto border-t border-ink/15 bg-paper">
+      <div className="flex flex-col gap-8 py-10 lg:flex-row lg:items-start lg:justify-between">
+        <div>
+          <Logo size="sm" />
+          <p className="mt-3 max-w-sm text-sm text-ink/70">
+            Free online calculators. Clean tools that run in your browser.
+          </p>
+        </div>
+
+        <nav aria-label="Footer" className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-wide text-ink/45">
+              Categories
+            </p>
+            <ul className="mt-3 space-y-2 text-sm text-ink">
+              {calculatorCategories.map((category) => (
+                <li key={category.id}>
+                  <Link href={category.path} className="hover:underline">
+                    {category.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className="text-xs font-bold uppercase tracking-wide text-ink/45">
+              Site
+            </p>
+            <ul className="mt-3 space-y-2 text-sm text-ink">
+              <li>
+                <Link href="/" className="hover:underline">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/scientific-calculator" className="hover:underline">
+                  Scientific Calculator
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="hover:underline">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacy" className="hover:underline">
+                  Privacy
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:underline">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
         </nav>
-        <p className="mt-4 text-xs font-medium uppercase tracking-wide text-[#a1a1aa]">
-          Calculators
-        </p>
-        <ul className="mt-2 flex flex-wrap gap-x-3 gap-y-1">
-          {CALCULATORS.map((c) => (
-            <li key={c.slug}>
-              <Link href={`/${c.slug}`} className="hover:text-[#18181b]">
-                {c.shortTitle}
-              </Link>
-            </li>
-          ))}
-        </ul>
       </div>
+      <p className="border-t border-ink/10 py-4 text-xs text-ink/50">
+        © 2026 Figsumo
+      </p>
     </footer>
   );
 }

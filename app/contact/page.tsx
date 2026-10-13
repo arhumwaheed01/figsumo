@@ -1,31 +1,26 @@
-import { pageMetadata } from "@/lib/seo";
-import { CONTACT_EMAIL, SITE_NAME } from "@/lib/site";
+import { createPageMetadata } from "@/lib/seo";
+import { siteConfig } from "@/lib/site";
 
-export const metadata = pageMetadata({
+export const metadata = createPageMetadata({
   title: "Contact",
-  description: "Email Figsumo at hello@figsumo.com. No contact form backend.",
+  description: `Contact Figsumo at ${siteConfig.email}.`,
   path: "/contact",
 });
 
 export default function ContactPage() {
   return (
-    <article className="mx-auto w-full max-w-[640px] px-4 py-8">
-      <h1 className="text-2xl font-semibold tracking-tight text-[#18181b]">
-        Contact
-      </h1>
-      <div className="mt-4 space-y-4 text-[15px] leading-relaxed text-[#3f3f46]">
-        <p>
-          There is no contact form backend on {SITE_NAME}. Email us directly:
-        </p>
-        <p>
-          <a
-            href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Figsumo feedback")}`}
-            className="underline underline-offset-2"
-          >
-            {CONTACT_EMAIL}
-          </a>
-        </p>
-      </div>
+    <article className="py-12">
+      <h1 className="text-3xl font-semibold tracking-tight text-ink">Contact</h1>
+      <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink/80">
+        Email{" "}
+        <a
+          href={`mailto:${siteConfig.email}`}
+          className="underline underline-offset-2"
+        >
+          {siteConfig.email}
+        </a>
+        .
+      </p>
     </article>
   );
 }

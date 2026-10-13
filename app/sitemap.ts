@@ -1,19 +1,29 @@
 import type { MetadataRoute } from "next";
-import { CALCULATORS, SITE_URL } from "@/lib/site";
+import { calculatorCategories } from "@/lib/calculators";
+import { absoluteUrl, tools } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const pages = [
-    { path: "", priority: 1 },
-    ...CALCULATORS.map((c) => ({ path: `/${c.slug}`, priority: 0.9 })),
-    { path: "/about", priority: 0.5 },
-    { path: "/privacy", priority: 0.4 },
-    { path: "/contact", priority: 0.4 },
-  ];
+  const staticPaths = ["/", "/about", "/privacy", "/contact"] as const;
+  const now = new Date();
 
-  return pages.map(({ path, priority }) => ({
-    url: path === "" ? SITE_URL : `${SITE_URL}${path}`,
-    lastModified: new Date("2026-10-08"),
-    changeFrequency: "monthly" as const,
-    priority,
-  }));
+  return [
+    ...staticPaths.map((path) => ({
+      url: absoluteUrl(path),
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: path === "/" ? 1 : 0.5,
+    })),
+    ...calculatorCategories.map((category) => ({
+      url: absoluteUrl(category.path),
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.7,
+    })),
+    ...tools.map((tool) => ({
+      url: absoluteUrl(tool.path),
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    })),
+  ];
 }

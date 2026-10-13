@@ -1,39 +1,41 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Nunito } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/site";
+import { absoluteUrl, siteConfig } from "@/lib/site";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const nunito = Nunito({
+  variable: "--font-nunito",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
+  metadataBase: new URL(absoluteUrl("/")),
   title: {
-    default: `Free online calculators - ${SITE_NAME}`,
-    template: `%s - ${SITE_NAME}`,
+    default: `${siteConfig.name} — Free Online Calculators`,
+    template: `%s | ${siteConfig.name}`,
   },
-  description: SITE_TAGLINE,
-  applicationName: SITE_NAME,
-  icons: {
-    icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/icon", type: "image/png", sizes: "32x32" },
-    ],
-    apple: [{ url: "/apple-icon", sizes: "180x180", type: "image/png" }],
-  },
+  description: siteConfig.description,
+  applicationName: siteConfig.name,
   openGraph: {
-    siteName: SITE_NAME,
     type: "website",
-    locale: "en_US",
+    locale: siteConfig.locale,
+    siteName: siteConfig.name,
+    title: `${siteConfig.name} — Free Online Calculators`,
+    description: siteConfig.description,
+    url: absoluteUrl("/"),
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteConfig.name} — Free Online Calculators`,
+    description: siteConfig.description,
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -41,17 +43,19 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${nunito.variable} h-full antialiased`}
     >
-      <head>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="icon" href="/icon" type="image/png" sizes="32x32" />
-        <link rel="apple-touch-icon" href="/apple-icon" sizes="180x180" />
-      </head>
-      <body className="flex min-h-full flex-col overflow-x-hidden bg-[#f4f4f5] font-sans text-[#18181b]">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+      <body
+        className="flex min-h-full flex-col bg-paper font-sans text-ink"
+        suppressHydrationWarning
+      >
+        <div className="site-shell flex min-h-full flex-1 flex-col">
+          <Header />
+          <main id="main" className="flex-1">
+            {children}
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

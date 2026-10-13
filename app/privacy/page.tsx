@@ -1,40 +1,20 @@
-import { pageMetadata } from "@/lib/seo";
-import { CONTACT_EMAIL, SITE_NAME } from "@/lib/site";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = pageMetadata({
+export const metadata = createPageMetadata({
   title: "Privacy",
   description:
-    "Figsumo has no accounts and does not save calculator inputs. Free tools in your browser.",
+    "Figsumo privacy policy: no accounts required, and calculator inputs stay in your browser.",
   path: "/privacy",
 });
 
 export default function PrivacyPage() {
   return (
-    <article className="mx-auto w-full max-w-[640px] px-4 py-8">
-      <h1 className="text-2xl font-semibold tracking-tight text-[#18181b]">
-        Privacy
-      </h1>
-      <div className="mt-4 space-y-4 text-[15px] leading-relaxed text-[#3f3f46]">
-        <p>
-          {SITE_NAME} does not require an account. Calculator inputs are handled
-          in your browser and are not saved on our servers.
-        </p>
-        <p>
-          Like most websites, the host may keep basic request logs (such as IP
-          address, browser type, and pages viewed) for reliability and security.
-          We do not sell personal information.
-        </p>
-        <p>
-          Questions:{" "}
-          <a
-            href={`mailto:${CONTACT_EMAIL}`}
-            className="underline underline-offset-2"
-          >
-            {CONTACT_EMAIL}
-          </a>
-          .
-        </p>
-      </div>
+    <article className="py-12">
+      <h1 className="text-3xl font-semibold tracking-tight text-ink">Privacy</h1>
+      <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink/80">
+        Figsumo does not require an account. Calculator inputs stay in your
+        browser and are not saved on our servers.
+      </p>
     </article>
   );
 }

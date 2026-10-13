@@ -1,47 +1,56 @@
 import Link from "next/link";
 
-/** 28px grey rounded square with a white calculator glyph. */
-export function LogoMark({ className = "h-7 w-7" }: { className?: string }) {
+export function CalculatorMark({
+  className = "h-8 w-8",
+}: {
+  className?: string;
+}) {
   return (
     <svg
       className={className}
-      width={28}
-      height={28}
-      viewBox="0 0 28 28"
+      viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
     >
-      <rect width="28" height="28" rx="6" fill="#3f3f46" />
+      <rect width="32" height="32" rx="7" fill="#2563EB" />
       <rect
-        x="7"
-        y="6"
-        width="14"
-        height="16"
-        rx="1.5"
-        stroke="#ffffff"
+        x="8"
+        y="7"
+        width="16"
+        height="18"
+        rx="2"
+        stroke="#FFFFFF"
         strokeWidth="1.5"
-        fill="none"
       />
-      <rect x="9.25" y="8.25" width="9.5" height="2.75" rx="0.5" fill="#ffffff" />
-      <circle cx="10.5" cy="14.5" r="1.1" fill="#ffffff" />
-      <circle cx="14" cy="14.5" r="1.1" fill="#ffffff" />
-      <circle cx="17.5" cy="14.5" r="1.1" fill="#ffffff" />
-      <circle cx="12.25" cy="18" r="1.1" fill="#ffffff" />
+      <rect x="10.5" y="9.5" width="11" height="3.5" rx="0.75" fill="#FFFFFF" />
+      <circle cx="12" cy="17" r="1.15" fill="#FFFFFF" />
+      <circle cx="16" cy="17" r="1.15" fill="#FFFFFF" />
+      <circle cx="20" cy="17" r="1.15" fill="#FFFFFF" />
+      <circle cx="12" cy="21.25" r="1.15" fill="#FFFFFF" />
+      <circle cx="16" cy="21.25" r="1.15" fill="#FFFFFF" />
+      <circle cx="20" cy="21.25" r="1.15" fill="#FFFFFF" />
     </svg>
   );
 }
 
-export function Logo({ className = "" }: { className?: string }) {
+export function Logo({
+  className = "",
+  size = "md",
+}: {
+  className?: string;
+  size?: "md" | "sm";
+}) {
+  const mark = size === "sm" ? "h-7 w-7" : "h-8 w-8";
+  const text = size === "sm" ? "text-base" : "text-lg";
+
   return (
     <Link
       href="/"
-      className={`inline-flex items-center gap-2.5 no-underline ${className}`}
+      className={`inline-flex items-center gap-2.5 text-ink no-underline ${className}`}
     >
-      <LogoMark />
-      <span className="text-base font-semibold tracking-tight text-[#18181b]">
-        Figsumo
-      </span>
+      <CalculatorMark className={mark} />
+      <span className={`${text} font-semibold tracking-tight`}>Figsumo</span>
     </Link>
   );
 }

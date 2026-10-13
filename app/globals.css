@@ -1,49 +1,51 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f4f4f5;
-  --surface: #ffffff;
-  --foreground: #18181b;
-  --muted: #71717a;
-  --border: #e4e4e7;
-  --accent: #3f3f46;
+  --ink: #101010;
+  --brand: #2563EB;
+  --paper: #ffffff;
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --site-max: 1440px;
+  --page-pad: 1rem;
 }
 
 @theme inline {
+  --color-ink: var(--ink);
+  --color-brand: var(--brand);
+  --color-paper: var(--paper);
   --color-background: var(--background);
-  --color-surface: var(--surface);
   --color-foreground: var(--foreground);
-  --color-muted: var(--muted);
-  --color-border: var(--border);
-  --color-accent: var(--accent);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-nunito);
+  --font-mono: var(--font-nunito);
+  --spacing-site: var(--site-max);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --page-pad: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --page-pad: 2rem;
+  }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-geist-sans), ui-sans-serif, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-nunito), ui-sans-serif, sans-serif;
 }
 
 a {
-  color: inherit;
+  color: var(--ink);
 }
 
-/* 2px grey focus ring for keyboard users */
-:focus-visible {
-  outline: 2px solid #3f3f46;
-  outline-offset: 2px;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-  outline: none;
-}
-
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible {
-  outline: none;
+.site-shell {
+  width: 100%;
+  max-width: var(--site-max);
+  margin-inline: auto;
+  padding-inline: var(--page-pad);
 }
