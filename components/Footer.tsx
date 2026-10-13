@@ -4,11 +4,11 @@ import { calculatorCategories } from "@/lib/calculators";
 
 export function Footer() {
   return (
-    <footer className="mt-auto border-t border-ink/10 bg-paper">
-      <div className="grid gap-10 px-1 py-14 sm:gap-12 sm:py-16 lg:grid-cols-12 lg:gap-10 lg:py-20">
+    <footer className="mt-auto mb-[5px] overflow-hidden rounded-[8px] bg-brand text-white">
+      <div className="grid gap-10 px-6 py-12 sm:gap-12 sm:px-8 sm:py-14 lg:grid-cols-12 lg:gap-10 lg:px-10 lg:py-16">
         <div className="lg:col-span-5">
-          <Logo size="sm" />
-          <p className="mt-5 max-w-sm text-[15px] leading-relaxed text-ink/70">
+          <Logo size="sm" inverted />
+          <p className="mt-5 max-w-sm text-[15px] leading-relaxed text-white/85">
             Free online calculators for finance, fitness, math, and everyday
             planning. Tools run in your browser — no account required.
           </p>
@@ -19,15 +19,15 @@ export function Footer() {
           className="grid gap-10 sm:grid-cols-2 lg:col-span-7 lg:gap-12"
         >
           <div>
-            <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-ink/50">
+            <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-white/70">
               Categories
             </p>
-            <ul className="mt-5 space-y-3 text-[15px] font-medium text-ink/85">
+            <ul className="mt-5 space-y-3 text-[15px] font-medium text-white">
               {calculatorCategories.map((category) => (
                 <li key={category.id}>
                   <Link
                     href={category.path}
-                    className="transition-colors hover:text-brand"
+                    className="transition-colors hover:text-white/80"
                   >
                     {category.title}
                   </Link>
@@ -36,32 +36,35 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-ink/50">
+            <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-white/70">
               Site
             </p>
-            <ul className="mt-5 space-y-3 text-[15px] font-medium text-ink/85">
+            <ul className="mt-5 space-y-3 text-[15px] font-medium text-white">
               <li>
-                <Link href="/" className="transition-colors hover:text-brand">
+                <Link href="/" className="transition-colors hover:text-white/80">
                   Home
                 </Link>
               </li>
               <li>
                 <Link
                   href="/scientific-calculator"
-                  className="transition-colors hover:text-brand"
+                  className="transition-colors hover:text-white/80"
                 >
                   Scientific Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="transition-colors hover:text-brand">
+                <Link
+                  href="/about"
+                  className="transition-colors hover:text-white/80"
+                >
                   About
                 </Link>
               </li>
               <li>
                 <Link
                   href="/privacy"
-                  className="transition-colors hover:text-brand"
+                  className="transition-colors hover:text-white/80"
                 >
                   Privacy
                 </Link>
@@ -69,7 +72,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="transition-colors hover:text-brand"
+                  className="transition-colors hover:text-white/80"
                 >
                   Contact
                 </Link>
@@ -79,8 +82,8 @@ export function Footer() {
         </nav>
       </div>
 
-      <div className="border-t border-ink/10 py-6">
-        <p className="text-sm text-ink/45">© 2026 Figsumo</p>
+      <div className="border-t border-white/20 px-6 py-6 sm:px-8 lg:px-10">
+        <p className="text-center text-sm text-white/80">© 2026 Figsumo</p>
       </div>
     </footer>
   );
