@@ -4,24 +4,31 @@ import { calculatorCategories } from "@/lib/calculators";
 
 export function Footer() {
   return (
-    <footer className="mt-auto border-t border-ink/15 bg-paper">
-      <div className="flex flex-col gap-8 py-10 lg:flex-row lg:items-start lg:justify-between">
-        <div>
+    <footer className="mt-auto border-t border-ink/10 bg-paper">
+      <div className="grid gap-10 px-1 py-14 sm:gap-12 sm:py-16 lg:grid-cols-12 lg:gap-10 lg:py-20">
+        <div className="lg:col-span-5">
           <Logo size="sm" />
-          <p className="mt-3 max-w-sm text-sm text-ink/70">
-            Free online calculators. Clean tools that run in your browser.
+          <p className="mt-5 max-w-sm text-[15px] leading-relaxed text-ink/70">
+            Free online calculators for finance, fitness, math, and everyday
+            planning. Tools run in your browser — no account required.
           </p>
         </div>
 
-        <nav aria-label="Footer" className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <nav
+          aria-label="Footer"
+          className="grid gap-10 sm:grid-cols-2 lg:col-span-7 lg:gap-12"
+        >
           <div>
-            <p className="text-xs font-bold uppercase tracking-wide text-ink/45">
+            <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-ink/50">
               Categories
             </p>
-            <ul className="mt-3 space-y-2 text-sm text-ink">
+            <ul className="mt-5 space-y-3 text-[15px] font-medium text-ink/85">
               {calculatorCategories.map((category) => (
                 <li key={category.id}>
-                  <Link href={category.path} className="hover:underline">
+                  <Link
+                    href={category.path}
+                    className="transition-colors hover:text-brand"
+                  >
                     {category.title}
                   </Link>
                 </li>
@@ -29,32 +36,41 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <p className="text-xs font-bold uppercase tracking-wide text-ink/45">
+            <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-ink/50">
               Site
             </p>
-            <ul className="mt-3 space-y-2 text-sm text-ink">
+            <ul className="mt-5 space-y-3 text-[15px] font-medium text-ink/85">
               <li>
-                <Link href="/" className="hover:underline">
+                <Link href="/" className="transition-colors hover:text-brand">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/scientific-calculator" className="hover:underline">
+                <Link
+                  href="/scientific-calculator"
+                  className="transition-colors hover:text-brand"
+                >
                   Scientific Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:underline">
+                <Link href="/about" className="transition-colors hover:text-brand">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/privacy" className="hover:underline">
+                <Link
+                  href="/privacy"
+                  className="transition-colors hover:text-brand"
+                >
                   Privacy
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:underline">
+                <Link
+                  href="/contact"
+                  className="transition-colors hover:text-brand"
+                >
                   Contact
                 </Link>
               </li>
@@ -62,9 +78,10 @@ export function Footer() {
           </div>
         </nav>
       </div>
-      <p className="border-t border-ink/10 py-4 text-xs text-ink/50">
-        © 2026 Figsumo
-      </p>
+
+      <div className="border-t border-ink/10 py-6">
+        <p className="text-sm text-ink/45">© 2026 Figsumo</p>
+      </div>
     </footer>
   );
 }

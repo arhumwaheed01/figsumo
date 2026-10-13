@@ -4,10 +4,16 @@ export function round(n: number, d = 2): number {
   return Math.round(n * f) / f;
 }
 
+/** Parse user input: "$32,000", "5.5%", "1 200" → number */
 export function parseNum(s: string): number {
   const trimmed = s.trim();
   if (!trimmed) return NaN;
-  const normalized = trimmed.replace(/,/g, "");
+  const normalized = trimmed
+    .replace(/[$€£¥%\s]/g, "")
+    .replace(/,/g, "");
+  if (!normalized || normalized === "-" || normalized === "." || normalized === "-.") {
+    return NaN;
+  }
   const n = Number(normalized);
   return Number.isFinite(n) ? n : NaN;
 }

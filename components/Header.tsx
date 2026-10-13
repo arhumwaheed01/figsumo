@@ -55,7 +55,7 @@ export function Header() {
   return (
     <header
       ref={rootRef}
-      className="sticky top-0 z-40 border-b border-ink/15 bg-paper"
+      className="sticky top-0 z-40 border-b border-ink/15 bg-paper/95 backdrop-blur-sm"
       onMouseLeave={() => setOpenId(null)}
     >
       <div className="relative w-full">

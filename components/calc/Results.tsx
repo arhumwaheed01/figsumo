@@ -19,16 +19,16 @@ export function ResultsSummary({ result }: { result: CalcSuccess }) {
   const secondary = rows.filter((r) => r !== primary);
 
   return (
-    <div className="overflow-hidden rounded-xl border border-ink/15 bg-paper">
-      <div className="flex items-center justify-between bg-brand px-4 py-2.5">
-        <h2 className="text-sm font-bold tracking-wide text-paper">Results</h2>
+    <div className="overflow-hidden rounded-xl border-2 border-ink/15 bg-paper shadow-[0_8px_24px_-18px_rgba(16,16,16,0.3)]">
+      <div className="flex items-center justify-between bg-brand px-4 py-3 text-white">
+        <h2 className="text-base font-bold tracking-wide text-white">Results</h2>
       </div>
 
-      <div className="space-y-3 p-4 sm:p-5">
+      <div className="space-y-3.5 p-5 sm:p-6">
         {primary ? (
-          <div className="rounded-lg bg-brand/[0.08] px-4 py-3">
-            <p className="text-sm font-medium text-ink/70">{primary.label}</p>
-            <p className="mt-1 text-2xl font-bold tabular-nums tracking-tight text-ink sm:text-3xl">
+          <div className="rounded-lg bg-brand/[0.1] px-4 py-4">
+            <p className="text-[15px] font-semibold text-ink/75">{primary.label}</p>
+            <p className="mt-1 text-3xl font-bold tabular-nums tracking-tight text-ink sm:text-4xl">
               {primary.value}
             </p>
           </div>
@@ -37,15 +37,15 @@ export function ResultsSummary({ result }: { result: CalcSuccess }) {
         {secondary.map((row) => (
           <div
             key={row.label}
-            className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-b border-ink/10 pb-2 text-sm last:border-0 last:pb-0"
+            className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-b border-ink/10 pb-2.5 text-[15px] last:border-0 last:pb-0"
           >
-            <span className="text-ink/70">{row.label}</span>
-            <span className="font-semibold tabular-nums text-ink">{row.value}</span>
+            <span className="font-medium text-ink/75">{row.label}</span>
+            <span className="font-bold tabular-nums text-ink">{row.value}</span>
           </div>
         ))}
 
         {note ? (
-          <p className="pt-1 text-xs leading-relaxed text-ink/50">{note}</p>
+          <p className="pt-1 text-sm leading-relaxed text-ink/55">{note}</p>
         ) : null}
       </div>
     </div>

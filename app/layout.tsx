@@ -46,7 +46,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${nunito.variable} h-full antialiased`}
     >
       <body
-        className="flex min-h-full flex-col bg-paper font-sans text-ink"
+        className="flex min-h-full flex-col bg-surface font-sans text-ink"
         suppressHydrationWarning
       >
         <div className="site-shell flex min-h-full flex-1 flex-col">

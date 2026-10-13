@@ -3,7 +3,7 @@
 import type { InputHTMLAttributes, SelectHTMLAttributes } from "react";
 
 const inputClass =
-  "w-full rounded-lg border border-ink/15 bg-paper px-3 py-2.5 text-sm text-ink outline-none placeholder:text-ink/45 focus:border-brand focus:ring-2 focus:ring-brand/20";
+  "w-full rounded-lg border-2 border-ink/20 bg-paper px-3.5 py-3 text-base font-medium text-ink outline-none placeholder:text-ink/40 focus:border-brand focus:ring-2 focus:ring-brand/25";
 
 type BaseProps = {
   label: string;
@@ -96,12 +96,15 @@ export function Field(props: FieldProps) {
 
   return (
     <div className="min-w-0">
-      <label htmlFor={name} className="mb-1.5 block text-sm font-semibold text-ink">
+      <label
+        htmlFor={name}
+        className="mb-2 block text-[15px] font-bold text-ink"
+      >
         {label}
       </label>
       <div className="flex items-stretch gap-2">
         {prefix ? (
-          <span className="flex shrink-0 items-center rounded-lg border border-ink/15 bg-ink/[0.04] px-3 text-sm font-semibold text-ink/70">
+          <span className="flex shrink-0 items-center rounded-lg border-2 border-ink/20 bg-ink/[0.06] px-3.5 text-base font-bold text-ink/80">
             {prefix}
           </span>
         ) : null}
@@ -109,7 +112,7 @@ export function Field(props: FieldProps) {
           <FieldControl {...props} />
         </div>
         {suffix ? (
-          <span className="flex shrink-0 items-center text-sm text-ink/60">
+          <span className="flex shrink-0 items-center text-[15px] font-semibold text-ink/70">
             {suffix}
           </span>
         ) : null}

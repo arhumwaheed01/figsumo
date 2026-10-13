@@ -64,15 +64,26 @@ export function FormulaCalculator({
     setValues((prev) => ({ ...prev, [name]: value }));
   }, []);
 
+  const safeCompute = useCallback(
+    (next: Record<string, string>): CalcResult => {
+      try {
+        return compute(next);
+      } catch {
+        return { error: "Could not calculate with these inputs. Check your values and try again." };
+      }
+    },
+    [compute],
+  );
+
   const runCalculate = useCallback(
     (next = values) => {
-      setResult(compute(next));
+      setResult(safeCompute(next));
     },
-    [compute, values],
+    [safeCompute, values],
   );
 
   useEffect(() => {
-    if (autoRun) setResult(compute(defaults));
+    if (autoRun) setResult(safeCompute(defaults));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -83,7 +94,7 @@ export function FormulaCalculator({
 
   const onClear = () => {
     setValues(defaults);
-    if (autoRun) setResult(compute(defaults));
+    if (autoRun) setResult(safeCompute(defaults));
     else setResult(null);
   };
 
@@ -95,7 +106,7 @@ export function FormulaCalculator({
       <div className="grid gap-6 lg:grid-cols-2 lg:items-start">
         <form
           onSubmit={onSubmit}
-          className="rounded-xl border border-ink/15 bg-ink/[0.03] p-4 sm:p-5"
+          className="rounded-xl border-2 border-ink/15 bg-paper p-5 shadow-[0_8px_24px_-18px_rgba(16,16,16,0.3)] sm:p-6"
         >
           <div className="grid gap-4 sm:grid-cols-2">
             {fields.map((field) => {
@@ -150,10 +161,10 @@ export function FormulaCalculator({
             })}
           </div>
 
-          <div className="mt-5 flex flex-wrap gap-2">
+          <div className="mt-6 flex flex-wrap gap-3">
             <button
               type="submit"
-              className="inline-flex h-11 items-center justify-center gap-2 rounded-lg bg-brand px-6 text-sm font-semibold text-paper transition-colors hover:bg-brand/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+              className="inline-flex h-12 min-w-[9.5rem] items-center justify-center gap-2 rounded-lg bg-brand px-7 text-base font-bold text-paper transition-colors hover:bg-brand/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
             >
               <span aria-hidden>▶</span>
               {submitLabel}
@@ -161,7 +172,7 @@ export function FormulaCalculator({
             <button
               type="button"
               onClick={onClear}
-              className="inline-flex h-11 items-center justify-center rounded-lg border border-ink/20 bg-paper px-5 text-sm font-semibold text-ink hover:bg-ink/[0.04]"
+              className="inline-flex h-12 items-center justify-center rounded-lg border-2 border-ink/20 bg-surface px-6 text-base font-bold text-ink hover:bg-ink/[0.06]"
             >
               Clear
             </button>

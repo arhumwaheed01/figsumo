@@ -54,12 +54,12 @@ export function CalculatorToolPage({ tool }: { tool: CalculatorEntry }) {
               </>
             ) : null}
           </p>
-          <h1 className="mt-2 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+          <h1 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-5xl">
             {tool.title}
           </h1>
-          <p className="mt-3 text-base leading-relaxed text-ink/70 sm:text-lg">
-            {tool.description} Adjust the inputs, then review the detailed
-            results, charts, and breakdowns.
+          <p className="text-body mt-4 text-lg">
+            {tool.description} Enter your numbers, press Calculate, then review
+            the highlighted results, charts, and tables.
           </p>
         </header>
 
