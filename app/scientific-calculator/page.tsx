@@ -12,6 +12,7 @@ export const metadata = tool
       title: tool.title,
       shortTitle: "Scientific",
       description: tool.description,
+      updated: tool.updated,
     })
   : {};
 

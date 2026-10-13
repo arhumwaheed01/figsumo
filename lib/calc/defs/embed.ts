@@ -16,7 +16,7 @@ function err(message: string): CalcResult {
 
 function embedIframe(path: string, height = 520): string {
   const src = absoluteUrl(path);
-  return `<iframe src="${src}" width="100%" height="${height}" style="max-width:480px;border:0;border-radius:8px" loading="lazy" title="Figsumo calculator"></iframe>`;
+  return `<iframe src="${src}" width="100%" height="${height}" style="max-width:480px;border:0;border-radius:8px" loading="lazy" title="FigSumo calculator"></iframe>`;
 }
 
 function loveScore(nameA: string, nameB: string): number {

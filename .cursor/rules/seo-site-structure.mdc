@@ -5,7 +5,7 @@ alwaysApply: true
 
 # SEO-based site structure (Figsumo)
 
-Always treat Figsumo as an SEO-first calculator site. Do not flatten tools into hash-only sections without a real URL.
+Always treat FigSumo as an SEO-first calculator site. Do not flatten tools into hash-only sections without a real URL. Brand spelling is **FigSumo**; canonical host is apex `https://figsumo.com` (www redirects to non-www).
 
 ## URL & IA
 

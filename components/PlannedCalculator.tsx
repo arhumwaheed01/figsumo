@@ -12,7 +12,7 @@ export function PlannedCalculator({ tool }: { tool: CalculatorEntry }) {
       <header className="max-w-3xl">
         <p className="text-sm font-semibold tracking-wide text-brand">
           <Link href="/" className="hover:underline">
-            Figsumo
+            FigSumo
           </Link>
           {category ? (
             <>
@@ -27,7 +27,7 @@ export function PlannedCalculator({ tool }: { tool: CalculatorEntry }) {
           {tool.title}
         </h1>
         <p className="mt-3 text-base leading-relaxed text-ink/70 sm:text-lg">
-          {tool.description} This tool is on the Figsumo roadmap and will be
+          {tool.description} This tool is on the FigSumo roadmap and will be
           available here soon.
         </p>
       </header>

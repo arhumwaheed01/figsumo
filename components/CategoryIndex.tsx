@@ -7,7 +7,7 @@ export function CategoryIndex({ category }: { category: CalculatorCategory }) {
       <header className="max-w-3xl">
         <p className="text-sm font-bold uppercase tracking-[0.12em] text-brand">
           <Link href="/" className="hover:underline">
-            Figsumo
+            FigSumo
           </Link>
           {" / "}
           Calculators

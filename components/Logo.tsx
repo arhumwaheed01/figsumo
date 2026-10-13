@@ -57,7 +57,7 @@ export function Logo({
       className={`inline-flex items-center gap-2.5 no-underline ${inverted ? "text-white" : "text-ink"} ${className}`}
     >
       <CalculatorMark className={mark} inverted={inverted} />
-      <span className={`${text} font-semibold tracking-tight`}>Figsumo</span>
+      <span className={`${text} font-semibold tracking-tight`}>FigSumo</span>
     </Link>
   );
 }

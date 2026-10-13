@@ -11,6 +11,9 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
+/** Only slugs from generateStaticParams exist — unknown paths are real 404s. */
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return allCalculators
     .filter((tool) => tool.slug !== "scientific-calculator")
@@ -20,7 +23,9 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const tool = getCalculatorBySlug(slug);
-  if (!tool || tool.slug === "scientific-calculator") return {};
+  if (!tool || tool.slug === "scientific-calculator") {
+    return { robots: { index: false, follow: false } };
+  }
 
   return createPageMetadata({
     title: tool.title,
@@ -31,7 +36,11 @@ export async function generateMetadata({ params }: Props) {
 
 function CalculatorSlugFallback() {
   return (
-    <article className="py-8 sm:py-12" aria-busy="true" aria-label="Loading calculator">
+    <article
+      className="py-8 sm:py-12"
+      aria-busy="true"
+      aria-label="Loading calculator"
+    >
       <header className="mb-8 max-w-3xl">
         <div className="h-4 w-40 animate-pulse rounded bg-ink/10" />
         <div className="mt-3 h-10 w-3/4 max-w-xl animate-pulse rounded bg-ink/10" />

@@ -83,7 +83,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/20 px-6 py-6 sm:px-8 lg:px-10">
-        <p className="text-center text-sm text-white/80">© 2026 Figsumo</p>
+        <p className="text-center text-sm text-white/80">© 2026 FigSumo</p>
       </div>
     </footer>
   );

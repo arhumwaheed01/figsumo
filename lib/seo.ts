@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { absoluteUrl, siteConfig, type ToolPage } from "@/lib/site";
+import {
+  absoluteUrl,
+  IS_PRODUCTION_SITE,
+  siteConfig,
+  type ToolPage,
+} from "@/lib/site";
 
 type PageSeoInput = {
   title: string;
@@ -24,6 +29,8 @@ export function createPageMetadata({
       ? title
       : `${title} | ${siteConfig.name}`;
 
+  const blockIndexing = !IS_PRODUCTION_SITE || noIndex;
+
   return {
     title: absoluteTitle ? { absolute: title } : title,
     description,
@@ -41,9 +48,16 @@ export function createPageMetadata({
       title: fullTitle,
       description,
     },
-    robots: noIndex
-      ? { index: false, follow: false }
-      : { index: true, follow: true },
+    // Only override robots when blocking; otherwise inherit root layout.
+    ...(blockIndexing
+      ? {
+          robots: {
+            index: false,
+            follow: false,
+            nocache: !IS_PRODUCTION_SITE,
+          },
+        }
+      : {}),
   };
 }
 

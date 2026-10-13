@@ -1,29 +1,37 @@
 import type { MetadataRoute } from "next";
 import { calculatorCategories } from "@/lib/calculators";
-import { absoluteUrl, tools } from "@/lib/site";
+import {
+  CONTENT_UPDATED,
+  IS_PRODUCTION_SITE,
+  SITE_URL,
+  tools,
+} from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticPaths = ["/", "/about", "/privacy", "/contact"] as const;
-  const now = new Date();
+  if (!IS_PRODUCTION_SITE) return [];
+
+  const staticPages: { path: string; updated: string }[] = [
+    { path: "/", updated: CONTENT_UPDATED },
+    { path: "/about", updated: CONTENT_UPDATED },
+    { path: "/privacy", updated: CONTENT_UPDATED },
+    { path: "/contact", updated: CONTENT_UPDATED },
+  ];
 
   return [
-    ...staticPaths.map((path) => ({
-      url: absoluteUrl(path),
-      lastModified: now,
-      changeFrequency: "weekly" as const,
-      priority: path === "/" ? 1 : 0.5,
+    ...staticPages.map((page) => ({
+      url: `${SITE_URL}${page.path === "/" ? "" : page.path}`,
+      lastModified: new Date(page.updated),
     })),
     ...calculatorCategories.map((category) => ({
-      url: absoluteUrl(category.path),
-      lastModified: now,
-      changeFrequency: "weekly" as const,
-      priority: 0.7,
+      url: `${SITE_URL}${category.path}`,
+      lastModified: new Date(CONTENT_UPDATED),
     })),
-    ...tools.map((tool) => ({
-      url: absoluteUrl(tool.path),
-      lastModified: now,
-      changeFrequency: "weekly" as const,
-      priority: 0.9,
-    })),
+    // Embed widgets stay out of the sitemap (noindex / Disallow).
+    ...tools
+      .filter((tool) => !tool.path.includes("for-your-site") && !tool.slug.includes("for-your-site"))
+      .map((tool) => ({
+        url: `${SITE_URL}${tool.path}`,
+        lastModified: new Date(tool.updated),
+      })),
   ];
 }

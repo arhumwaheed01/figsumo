@@ -14,6 +14,7 @@ function toToolPage(tool: CalculatorEntry): ToolPage {
     title: tool.title,
     shortTitle: tool.title.replace(/ Calculator$/, ""),
     description: tool.description,
+    updated: tool.updated,
   };
 }
 
@@ -43,7 +44,7 @@ export function CalculatorToolPage({ tool }: { tool: CalculatorEntry }) {
         <header className="mb-8 max-w-3xl">
           <p className="text-sm font-semibold tracking-wide text-brand">
             <Link href="/" className="hover:underline">
-              Figsumo
+              FigSumo
             </Link>
             {category ? (
               <>
@@ -78,7 +79,7 @@ export function CalculatorToolPage({ tool }: { tool: CalculatorEntry }) {
                 About this calculator
               </h2>
               <p className="mt-3 text-base leading-relaxed text-ink/75">
-                Figsumo runs this tool in your browser. Results are for planning
+                FigSumo runs this tool in your browser. Results are for planning
                 and education — confirm important decisions with a qualified
                 professional when needed.
               </p>

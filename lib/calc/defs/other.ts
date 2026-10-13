@@ -1584,7 +1584,7 @@ export const otherDefs: CalcDef[] = [
           { value: "decode", label: "Decode from Base64" },
         ],
       },
-      { name: "text", label: "Text", type: "text", defaultValue: "Hello, Figsumo!", placeholder: "Input text" },
+      { name: "text", label: "Text", type: "text", defaultValue: "Hello, FigSumo!", placeholder: "Input text" },
     ],
     compute(values) {
       const text = values.text;

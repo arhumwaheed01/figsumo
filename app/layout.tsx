@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { absoluteUrl, siteConfig } from "@/lib/site";
+import {
+  absoluteUrl,
+  IS_PRODUCTION_SITE,
+  SITE_URL,
+  siteConfig,
+} from "@/lib/site";
 import "./globals.css";
 
 const nunito = Nunito({
@@ -13,7 +18,7 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(absoluteUrl("/")),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: `${siteConfig.name} — Free Online Calculators`,
     template: `%s | ${siteConfig.name}`,
@@ -33,10 +38,9 @@ export const metadata: Metadata = {
     title: `${siteConfig.name} — Free Online Calculators`,
     description: siteConfig.description,
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: IS_PRODUCTION_SITE
+    ? { index: true, follow: true }
+    : { index: false, follow: false, nocache: true },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

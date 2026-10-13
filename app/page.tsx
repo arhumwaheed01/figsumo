@@ -5,9 +5,9 @@ import { ScientificCalculator } from "@/components/ScientificCalculator";
 import { createPageMetadata, websiteJsonLd } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
-  title: "Figsumo — Free Online Calculators",
+  title: "FigSumo — Free Online Calculators",
   description:
-    "Free online calculators. Use the Figsumo scientific calculator for trig, logs, powers, roots, and memory — Deg or Rad, tap or type.",
+    "Free online calculators. Use the FigSumo scientific calculator for trig, logs, powers, roots, and memory — Deg or Rad, tap or type.",
   path: "/",
   absoluteTitle: true,
 });
@@ -26,7 +26,7 @@ export default function Home() {
             id="home-heading"
             className="mt-3 text-4xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl"
           >
-            Figsumo
+            FigSumo
           </h1>
           <p className="text-body mx-auto mt-4 max-w-2xl text-lg sm:text-xl">
             Fast, accurate tools that run in your browser — finance, fitness,

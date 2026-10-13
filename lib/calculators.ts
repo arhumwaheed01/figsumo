@@ -6,6 +6,8 @@ export type CalculatorEntry = {
   path: string;
   status: CalculatorStatus;
   description: string;
+  /** ISO date bumped when logic or page copy changes (sitemap lastmod). */
+  updated: string;
 };
 
 export type CalculatorCategory = {
@@ -25,6 +27,8 @@ function slugify(title: string): string {
     .replace(/^-+|-+$/g, "");
 }
 
+const DEFAULT_UPDATED = "2026-10-14";
+
 function tool(
   title: string,
   status: CalculatorStatus = "live",
@@ -36,6 +40,7 @@ function tool(
     path: `/${slug}`,
     status,
     description: `Free online ${title.toLowerCase()}.`,
+    updated: DEFAULT_UPDATED,
   };
 }
 
