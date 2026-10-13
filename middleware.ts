@@ -1,4 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
+import { isKnownAppPath } from "@/lib/known-paths";
 
 function productionHost(): string | null {
   const raw = process.env.NEXT_PUBLIC_SITE_URL;
@@ -16,21 +17,25 @@ export function middleware(req: NextRequest) {
   const isProdDeployment = process.env.VERCEL_ENV === "production";
 
   // Apex is canonical: www → non-www (once the real domain is attached).
-  if (
-    isProdDeployment &&
-    prodHost &&
-    host === `www.${prodHost}`
-  ) {
+  if (isProdDeployment && prodHost && host === `www.${prodHost}`) {
     const url = req.nextUrl.clone();
     url.host = prodHost;
     url.protocol = "https";
     return NextResponse.redirect(url, 308);
   }
 
+  // Closed set of single-segment paths. dynamicParams=false is incompatible
+  // with cacheComponents, so unknown slugs are rejected here instead.
+  if (!isKnownAppPath(req.nextUrl.pathname)) {
+    const res = new NextResponse(null, { status: 404, statusText: "Not Found" });
+    if (!isProdDeployment || !prodHost || host !== prodHost) {
+      res.headers.set("X-Robots-Tag", "noindex, nofollow");
+    }
+    return res;
+  }
+
   const res = NextResponse.next();
 
-  // Noindex any host that is not the configured production domain
-  // (covers *.vercel.app aliases even when VERCEL_ENV=production).
   if (!isProdDeployment || !prodHost || host !== prodHost) {
     res.headers.set("X-Robots-Tag", "noindex, nofollow");
   }
@@ -39,5 +44,7 @@ export function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)"],
+  matcher: [
+    "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico)$).*)",
+  ],
 };

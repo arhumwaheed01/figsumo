@@ -11,9 +11,11 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
-/** Only slugs from generateStaticParams exist — unknown paths are real 404s. */
-export const dynamicParams = false;
-
+/**
+ * Note: `dynamicParams = false` is incompatible with `cacheComponents`.
+ * Unknown slugs call notFound() below; middleware also rejects unknown
+ * single-segment paths so they never soft-404 as 200.
+ */
 export function generateStaticParams() {
   return allCalculators
     .filter((tool) => tool.slug !== "scientific-calculator")
@@ -23,9 +25,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const tool = getCalculatorBySlug(slug);
-  if (!tool || tool.slug === "scientific-calculator") {
-    return { robots: { index: false, follow: false } };
-  }
+  if (!tool || tool.slug === "scientific-calculator") notFound();
 
   return createPageMetadata({
     title: tool.title,
