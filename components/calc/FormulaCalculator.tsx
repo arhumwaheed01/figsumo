@@ -1,9 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Field } from "@/components/calc/Field";
-import { Results } from "@/components/calc/Results";
+import { ResultsSummary, ResultsVisuals } from "@/components/calc/Results";
 import type { CalcResult } from "@/lib/calc/result-types";
 import { isCalcError } from "@/lib/calc/result-types";
 
@@ -19,7 +18,6 @@ export type FieldDef = {
   placeholder?: string;
   suffix?: string;
   prefix?: string;
-  /** Span full width on sm+ grids */
   wide?: boolean;
 };
 
@@ -31,17 +29,10 @@ export type CalcResultRow = {
 
 export type { CalcResult };
 
-export type RelatedLink = {
-  href: string;
-  title: string;
-};
-
 export type FormulaCalculatorProps = {
   fields: FieldDef[];
   compute: (values: Record<string, string>) => CalcResult;
   submitLabel?: string;
-  related?: RelatedLink[];
-  /** Run calculate once with defaults on mount */
   autoRun?: boolean;
 };
 
@@ -63,7 +54,6 @@ export function FormulaCalculator({
   fields,
   compute,
   submitLabel = "Calculate",
-  related = [],
   autoRun = true,
 }: FormulaCalculatorProps) {
   const defaults = useMemo(() => initialValues(fields), [fields]);
@@ -82,8 +72,7 @@ export function FormulaCalculator({
   );
 
   useEffect(() => {
-    if (autoRun) runCalculate(defaults);
-    // intentionally once on mount for defaults
+    if (autoRun) setResult(compute(defaults));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -97,6 +86,9 @@ export function FormulaCalculator({
     if (autoRun) setResult(compute(defaults));
     else setResult(null);
   };
+
+  const success =
+    result && !isCalcError(result) ? result : null;
 
   return (
     <div className="space-y-6">
@@ -186,7 +178,7 @@ export function FormulaCalculator({
                 {result.error}
               </p>
             ) : (
-              <Results result={result} />
+              <ResultsSummary result={result} />
             )
           ) : (
             <div className="rounded-xl border border-dashed border-ink/20 px-4 py-10 text-center text-sm text-ink/45">
@@ -196,27 +188,7 @@ export function FormulaCalculator({
         </div>
       </div>
 
-      {related.length > 0 ? (
-        <section aria-labelledby="related-calcs">
-          <div className="rounded-xl border border-ink/10 bg-ink/[0.03] p-4">
-            <h2 id="related-calcs" className="text-sm font-bold text-ink">
-              Related
-            </h2>
-            <ul className="mt-3 flex flex-wrap gap-2">
-              {related.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="inline-flex rounded-lg border border-brand/30 bg-paper px-3 py-2 text-sm font-semibold text-brand hover:bg-brand hover:text-paper"
-                  >
-                    {item.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-      ) : null}
+      {success ? <ResultsVisuals result={success} /> : null}
     </div>
   );
 }

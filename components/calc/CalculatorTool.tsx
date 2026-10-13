@@ -1,32 +1,12 @@
 "use client";
 
 import { FormulaCalculator } from "@/components/calc/FormulaCalculator";
-import { RelatedLinks } from "@/components/calc/RelatedLinks";
 import { ScientificCalculator } from "@/components/ScientificCalculator";
-import { calculatorCategories } from "@/lib/calculators";
 import { getCalcDef } from "@/lib/calc/registry";
 
-function relatedFor(slug: string) {
-  const category = calculatorCategories.find((c) =>
-    c.items.some((item) => item.slug === slug),
-  );
-  if (!category) return [];
-  return category.items
-    .filter((item) => item.slug !== slug)
-    .slice(0, 8)
-    .map((item) => ({ href: item.path, title: item.title }));
-}
-
 export function CalculatorTool({ slug }: { slug: string }) {
-  const related = relatedFor(slug);
-
   if (slug === "scientific-calculator") {
-    return (
-      <div className="space-y-6">
-        <ScientificCalculator />
-        <RelatedLinks items={related} />
-      </div>
-    );
+    return <ScientificCalculator />;
   }
 
   const def = getCalcDef(slug);
@@ -40,10 +20,6 @@ export function CalculatorTool({ slug }: { slug: string }) {
   }
 
   return (
-    <FormulaCalculator
-      fields={def.fields}
-      compute={def.compute}
-      related={related}
-    />
+    <FormulaCalculator fields={def.fields} compute={def.compute} />
   );
 }
