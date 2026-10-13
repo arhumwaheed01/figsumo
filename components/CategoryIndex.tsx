@@ -33,15 +33,9 @@ export function CategoryIndex({ category }: { category: CalculatorCategory }) {
               <span className="mt-1 block text-sm leading-relaxed text-ink/60">
                 {item.description}
               </span>
-              {item.status === "live" ? (
-                <span className="mt-3 inline-block text-xs font-semibold uppercase tracking-wide text-brand">
-                  Available
-                </span>
-              ) : (
-                <span className="mt-3 inline-block text-xs font-semibold uppercase tracking-wide text-ink/40">
-                  Coming soon
-                </span>
-              )}
+              <span className="mt-3 inline-block text-xs font-semibold uppercase tracking-wide text-brand">
+                Open
+              </span>
             </Link>
           </li>
         ))}

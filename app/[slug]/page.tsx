@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { PlannedCalculator } from "@/components/PlannedCalculator";
+import { CalculatorToolPage } from "@/components/calc/CalculatorToolPage";
 import {
   allCalculators,
   getCalculatorBySlug,
@@ -12,20 +12,19 @@ type Props = {
 
 export function generateStaticParams() {
   return allCalculators
-    .filter((tool) => tool.status === "planned")
+    .filter((tool) => tool.slug !== "scientific-calculator")
     .map((tool) => ({ slug: tool.slug }));
 }
 
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const tool = getCalculatorBySlug(slug);
-  if (!tool || tool.status === "live") return {};
+  if (!tool || tool.slug === "scientific-calculator") return {};
 
   return createPageMetadata({
     title: tool.title,
-    description: `${tool.description} Coming soon on Figsumo.`,
+    description: tool.description,
     path: tool.path,
-    noIndex: true,
   });
 }
 
@@ -33,7 +32,7 @@ export default async function CalculatorSlugPage({ params }: Props) {
   const { slug } = await params;
   const tool = getCalculatorBySlug(slug);
 
-  if (!tool || tool.status === "live") notFound();
+  if (!tool || tool.slug === "scientific-calculator") notFound();
 
-  return <PlannedCalculator tool={tool} />;
+  return <CalculatorToolPage tool={tool} />;
 }

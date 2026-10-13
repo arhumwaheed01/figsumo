@@ -27,7 +27,7 @@ function slugify(title: string): string {
 
 function tool(
   title: string,
-  status: CalculatorStatus = "planned",
+  status: CalculatorStatus = "live",
   slug = slugify(title),
 ): CalculatorEntry {
   return {
@@ -178,11 +178,7 @@ export const calculatorCategories: CalculatorCategory[] = [
     description:
       "Scientific, fraction, percentage, geometry, statistics, and algebra tools.",
     items: [
-      tool(
-        "Scientific Calculator",
-        "live",
-        "scientific-calculator",
-      ),
+      tool("Scientific Calculator", "live", "scientific-calculator"),
       ...tools(
         "Fraction Calculator",
         "Percentage Calculator",

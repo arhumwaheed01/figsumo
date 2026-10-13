@@ -15,7 +15,8 @@ Always treat Figsumo as an SEO-first calculator site. Do not flatten tools into 
 - Home `/` is the brand hub: featured tools, clear internal links, not a dump of every widget without copy.
 - Keep utility pages: `/about`, `/privacy`, `/contact`.
 - Prefer `next/link` for internal links. Footer and header must expose the main crawl paths.
-- Only `live` tools go in the sitemap; `planned` tool URLs may exist as noindex placeholders until built.
+- Calculator implementations live in `lib/calc/defs/*` + `lib/calc/registry.ts`; keep taxonomy slugs in sync.
+- Prefer formula accuracy tests via `npm run test:calcs` when changing calc math.
 
 ## Per-page SEO
 
