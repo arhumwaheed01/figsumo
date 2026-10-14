@@ -1,7 +1,9 @@
+import { Suspense } from "react";
 import Link from "next/link";
 import { HomeDirectory } from "@/components/HomeDirectory";
 import { JsonLd } from "@/components/JsonLd";
 import { ScientificCalculator } from "@/components/ScientificCalculator";
+import { SearchResults } from "@/components/SearchResults";
 import { createPageMetadata, websiteJsonLd } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
@@ -12,10 +14,34 @@ export const metadata = createPageMetadata({
   absoluteTitle: true,
 });
 
-export default function Home() {
+type HomeProps = {
+  searchParams: Promise<{ q?: string | string[] }>;
+};
+
+function firstQuery(value: string | string[] | undefined): string {
+  if (Array.isArray(value)) return value[0] ?? "";
+  return value ?? "";
+}
+
+async function HomeSearch({
+  searchParams,
+}: {
+  searchParams: HomeProps["searchParams"];
+}) {
+  const params = await searchParams;
+  const q = firstQuery(params.q).trim();
+  if (!q) return null;
+  return <SearchResults query={q} />;
+}
+
+export default function Home({ searchParams }: HomeProps) {
   return (
     <>
       <JsonLd data={websiteJsonLd()} />
+
+      <Suspense fallback={null}>
+        <HomeSearch searchParams={searchParams} />
+      </Suspense>
 
       <section className="py-10 sm:py-14" aria-labelledby="home-heading">
         <div className="mb-8 text-center sm:mb-10">

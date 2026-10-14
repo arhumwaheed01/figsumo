@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useId, useRef, useState } from "react";
 import { calculatorCategories } from "@/lib/calculators";
+import { HeaderSearch } from "./HeaderSearch";
 import { Logo } from "./Logo";
 
 function columnClass(count: number) {
@@ -106,41 +107,7 @@ export function Header() {
             </div>
           </nav>
 
-          <form
-            className="w-[min(100%,14rem)] sm:w-[min(100%,18rem)] md:w-[min(100%,20rem)]"
-            role="search"
-            action="/"
-            method="get"
-          >
-            <label htmlFor="site-search" className="sr-only">
-              Search calculators
-            </label>
-            <div className="relative">
-              <span
-                className="pointer-events-none absolute inset-y-0 left-3 flex items-center text-ink"
-                aria-hidden="true"
-              >
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <circle cx="11" cy="11" r="7" />
-                  <path d="M20 20l-3.5-3.5" strokeLinecap="round" />
-                </svg>
-              </span>
-              <input
-                id="site-search"
-                name="q"
-                type="search"
-                placeholder="Search"
-                className="h-10 w-full rounded-full border border-ink/20 bg-paper pl-10 pr-3 text-sm text-ink outline-none placeholder:text-ink/45 focus:border-brand focus:ring-2 focus:ring-brand/20 sm:h-11 sm:pr-4"
-              />
-            </div>
-          </form>
+          <HeaderSearch />
         </div>
 
         {openCategory ? (

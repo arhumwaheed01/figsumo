@@ -28,11 +28,11 @@ export default function NotFound() {
         role="search"
         className="mt-8 flex max-w-xl flex-col gap-3 sm:flex-row"
       >
-        <label className="sr-only" htmlFor="site-search">
+        <label className="sr-only" htmlFor="not-found-search">
           Search {siteConfig.name}
         </label>
         <input
-          id="site-search"
+          id="not-found-search"
           name="q"
           type="search"
           placeholder="Search calculators"
