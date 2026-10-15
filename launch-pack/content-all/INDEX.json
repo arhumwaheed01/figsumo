@@ -1,0 +1,1692 @@
+{
+  "count": 241,
+  "pages": [
+    {
+      "path": "/us/401k-calculator",
+      "file": "us/401k-calculator.md",
+      "title": "401(k) Calculator 2026: Employer Match & Growth | FigSumo",
+      "verify_flags": 0,
+      "words": "1,073 (minimum 1,000)"
+    },
+    {
+      "path": "/amortization-calculator",
+      "file": "amortization-calculator.md",
+      "title": "Amortization Calculator & Schedule with Extra Payments | FigSumo",
+      "verify_flags": 0,
+      "words": "1,053 (minimum 1,000)"
+    },
+    {
+      "path": "/annuity-calculator",
+      "file": "annuity-calculator.md",
+      "title": "Annuity Calculator: Future Value of Regular Deposits | FigSumo",
+      "verify_flags": 0,
+      "words": "1,269 (minimum 1,000)"
+    },
+    {
+      "path": "/annuity-payout-calculator",
+      "file": "annuity-payout-calculator.md",
+      "title": "Annuity Payout Calculator: Income From a Lump Sum | FigSumo",
+      "verify_flags": 0,
+      "words": "1,162 (minimum 1,000)"
+    },
+    {
+      "path": "/apr-calculator",
+      "file": "apr-calculator.md",
+      "title": "APR Calculator: True Cost of a Loan Including Fees | FigSumo",
+      "verify_flags": 0,
+      "words": "1,173 (minimum 1,000)"
+    },
+    {
+      "path": "/auto-lease-calculator",
+      "file": "auto-lease-calculator.md",
+      "title": "Car Lease Calculator: Monthly Payment From Money Factor | FigSumo",
+      "verify_flags": 0,
+      "words": "1,113 (minimum 1,000)"
+    },
+    {
+      "path": "/auto-loan-calculator",
+      "file": "auto-loan-calculator.md",
+      "title": "Auto Loan Calculator with Sales Tax, Trade-In & Fees | FigSumo",
+      "verify_flags": 0,
+      "words": "1,129 (minimum 1,000)"
+    },
+    {
+      "path": "/average-return-calculator",
+      "file": "average-return-calculator.md",
+      "title": "Average Return Calculator: Arithmetic vs CAGR | FigSumo",
+      "verify_flags": 0,
+      "words": "1,045 (minimum 1,000)"
+    },
+    {
+      "path": "/boat-loan-calculator",
+      "file": "boat-loan-calculator.md",
+      "title": "Boat Loan Calculator: Monthly Payment & Total Interest | FigSumo",
+      "verify_flags": 0,
+      "words": "1,020 (minimum 1,000)"
+    },
+    {
+      "path": "/bond-calculator",
+      "file": "bond-calculator.md",
+      "title": "Bond Price & Yield Calculator | FigSumo",
+      "verify_flags": 0,
+      "words": "1,072 (minimum 1,000)"
+    },
+    {
+      "path": "/break-even-calculator",
+      "file": "break-even-calculator.md",
+      "title": "Break-Even Point Calculator | FigSumo",
+      "verify_flags": 0,
+      "words": "836 (minimum 600)"
+    },
+    {
+      "path": "/budget-calculator",
+      "file": "budget-calculator.md",
+      "title": "Monthly Budget Calculator | FigSumo",
+      "verify_flags": 0,
+      "words": "1,019 (minimum 1,000)"
+    },
+    {
+      "path": "/business-loan-calculator",
+      "file": "business-loan-calculator.md",
+      "title": "Business Loan Calculator: Payment, Interest & APR | FigSumo",
+      "verify_flags": 0,
+      "words": "1,019 (minimum 1,000)"
+    },
+    {
+      "path": "/uk/buy-to-let-mortgage-calculator",
+      "file": "uk/buy-to-let-mortgage-calculator.md",
+      "title": "Buy-to-Let Mortgage Calculator: Rental Cover & Payments | FigSumo",
+      "verify_flags": 0,
+      "words": "1,050 (minimum 1,000)"
+    },
+    {
+      "path": "/ca/capital-gains-tax-calculator",
+      "file": "ca/capital-gains-tax-calculator.md",
+      "title": "Canada Capital Gains Tax Calculator 2026 | FigSumo",
+      "verify_flags": 0,
+      "words": "1,002 (minimum 1,000)"
+    },
+    {
+      "path": "/ca/take-home-pay-calculator",
+      "file": "ca/take-home-pay-calculator.md",
+      "title": "Canada Take-Home Pay Calculator 2026: CPP, EI & Tax | FigSumo",
+      "verify_flags": 0,
+      "words": "1,052 (minimum 1,000)"
+    },
+    {
+      "path": "/ca/income-tax-calculator",
+      "file": "ca/income-tax-calculator.md",
+      "title": "Canada Income Tax Calculator 2026: Federal + Provincial | FigSumo",
+      "verify_flags": 0,
+      "words": "1,068 (minimum 1,000)"
+    },
+    {
+      "path": "/ca/mortgage-affordability-calculator",
+      "file": "ca/mortgage-affordability-calculator.md",
+      "title": "Canada Mortgage Affordability Calculator (Stress Test) | FigSumo",
+      "verify_flags": 4,
+      "words": "1,012 (minimum 1,000)"
+    },
+    {
+      "path": "/ca/mortgage-calculator",
+      "file": "ca/mortgage-calculator.md",
+      "title": "Canadian Mortgage Calculator with CMHC Insurance | FigSumo",
+      "verify_flags": 0,
+      "words": "1,218 (minimum 1,000)"
+    },
+    {
+      "path": "/cap-rate-calculator",
+      "file": "cap-rate-calculator.md",
+      "title": "Cap Rate Calculator: Property Value From NOI | FigSumo",
+      "verify_flags": 0,
+      "words": "1,003 (minimum 1,000)"
+    },
+    {
+      "path": "/cash-back-vs-low-apr-calculator",
+      "file": "cash-back-vs-low-apr-calculator.md",
+      "title": "Cash Back vs Low APR Calculator for Car Deals | FigSumo",
+      "verify_flags": 0,
+      "words": "1,081 (minimum 1,000)"
+    },
+    {
+      "path": "/cd-calculator",
+      "file": "cd-calculator.md",
+      "title": "CD Calculator: Certificate of Deposit Interest | FigSumo",
+      "verify_flags": 1,
+      "words": "1,056 (minimum 1,000)"
+    },
+    {
+      "path": "/us/closing-cost-calculator",
+      "file": "us/closing-cost-calculator.md",
+      "title": "Mortgage Closing Cost Calculator | FigSumo",
+      "verify_flags": 0,
+      "words": "1,020 (minimum 1,000)"
+    },
+    {
+      "path": "/ca/cmhc-insurance-calculator",
+      "file": "ca/cmhc-insurance-calculator.md",
+      "title": "CMHC Mortgage Insurance Calculator | FigSumo",
+      "verify_flags": 0,
+      "words": "1,049 (minimum 1,000)"
+    },
+    {
+      "path": "/college-cost-calculator",
+      "file": "college-cost-calculator.md",
+      "title": "College Cost Calculator: Future Tuition & Savings | FigSumo",
+      "verify_flags": 0,
+      "words": "1,091 (minimum 1,000)"
+    },
+    {
+      "path": "/commission-calculator",
+      "file": "commission-calculator.md",
+      "title": "Commission Calculator: Flat, Tiered & Percentage | FigSumo",
+      "verify_flags": 0,
+      "words": "1,001 (minimum 1,000)"
+    },
+    {
+      "path": "/compound-interest-calculator",
+      "file": "compound-interest-calculator.md",
+      "title": "Compound Interest Calculator with Monthly Contributions | FigSumo",
+      "verify_flags": 0,
+      "words": "1,041 (minimum 1,000)"
+    },
+    {
+      "path": "/ca/cpp-calculator",
+      "file": "ca/cpp-calculator.md",
+      "title": "CPP and CPP2 Contribution Calculator 2026 | FigSumo",
+      "verify_flags": 0,
+      "words": "1,021 (minimum 1,000)"
+    },
+    {
+      "path": "/credit-card-calculator",
+      "file": "credit-card-calculator.md",
+      "title": "Credit Card Minimum Payment Calculator | FigSumo",
+      "verify_flags": 0,
+      "words": "1,239 (minimum 1,000)"
+    },
+    {
+      "path": "/credit-card-payoff-calculator",
+      "file": "credit-card-payoff-calculator.md",
+      "title": "Credit Card Payoff Calculator: Avalanche vs Snowball | FigSumo",
+      "verify_flags": 0,
+      "words": "1,074 (minimum 1,000)"
+    },
+    {
+      "path": "/currency-converter",
+      "file": "currency-converter.md",
+      "title": "Currency Converter with Dated Exchange Rates | FigSumo",
+      "verify_flags": 0,
+      "words": "1,073 (minimum 1,000)"
+    },
+    {
+      "path": "/debt-consolidation-calculator",
+      "file": "debt-consolidation-calculator.md",
+      "title": "Debt Consolidation Calculator: Is One Loan Cheaper? | FigSumo",
+      "verify_flags": 0,
+      "words": "1,025 (minimum 1,000)"
+    },
+    {
+      "path": "/debt-payoff-calculator",
+      "file": "debt-payoff-calculator.md",
+      "title": "Debt Payoff Calculator: Time and Interest to Debt-Free | FigSumo",
+      "verify_flags": 0,
+      "words": "1,021 (minimum 1,000)"
+    },
+    {
+      "path": "/debt-to-income-calculator",
+      "file": "debt-to-income-calculator.md",
+      "title": "Debt-to-Income (DTI) Ratio Calculator | FigSumo",
+      "verify_flags": 0,
+      "words": "1,049 (minimum 1,000)"
+    },
+    {
+      "path": "/depreciation-calculator",
+      "file": "depreciation-calculator.md",
+      "title": "Depreciation Calculator: Straight-Line & Declining | FigSumo",
+      "verify_flags": 0,
+      "words": "1,027 (minimum 1,000)"
+    },
+    {
+      "path": "/discount-calculator",
+      "file": "discount-calculator.md",
+      "title": "Discount Calculator: Sale Price & Percent Off | FigSumo",
+      "verify_flags": 0,
+      "words": "1,009 (minimum 1,000)"
+    },
+    {
+      "path": "/down-payment-calculator",
+      "file": "down-payment-calculator.md",
+      "title": "Down Payment Calculator: How Much to Put Down | FigSumo",
+      "verify_flags": 0,
+      "words": "1,028 (minimum 1,000)"
+    },
+    {
+      "path": "/us/fha-loan-calculator",
+      "file": "us/fha-loan-calculator.md",
+      "title": "FHA Loan Calculator with Upfront & Annual MIP | FigSumo",
+      "verify_flags": 3,
+      "words": "1,026 (minimum 1,000)"
+    },
+    {
+      "path": "/ca/fhsa-calculator",
+      "file": "ca/fhsa-calculator.md",
+      "title": "FHSA Calculator: First Home Savings Account | FigSumo",
+      "verify_flags": 1,
+      "words": "1,029 (minimum 1,000)"
+    },
+    {
+      "path": "/freelance-rate-calculator",
+      "file": "freelance-rate-calculator.md",
+      "title": "Freelance Hourly Rate Calculator | FigSumo",
+      "verify_flags": 0,
+      "words": "1,014 (minimum 1,000)"
+    },
+    {
+      "path": "/future-value-calculator",
+      "file": "future-value-calculator.md",
+      "title": "Future Value Calculator: Lump Sum and Regular Payments | FigSumo",
+      "verify_flags": 0,
+      "words": "1,003 (minimum 1,000)"
+    },
+    {
+      "path": "/ca/gst-hst-calculator",
+      "file": "ca/gst-hst-calculator.md",
+      "title": "GST/HST Calculator by Province | FigSumo",
+      "verify_flags": 1,
+      "words": "1,001 (minimum 1,000)"
+    },
+    {
+      "path": "/heloc-calculator",
+      "file": "heloc-calculator.md",
+      "title": "HELOC Calculator: Draw-Period and Repayment Payments | FigSumo",
+      "verify_flags": 0,
+      "words": "1,022 (minimum 1,000)"
+    },
+    {
+      "path": "/home-equity-loan-calculator",
+      "file": "home-equity-loan-calculator.md",
+      "title": "Home Equity Loan Calculator: Borrowing Limit & Payment | FigSumo",
+      "verify_flags": 0,
+      "words": "1,031 (minimum 1,000)"
+    },
+    {
+      "path": "/house-affordability-calculator",
+      "file": "house-affordability-calculator.md",
+      "title": "How Much House Can I Afford? Affordability Calculator | FigSumo",
+      "verify_flags": 0,
+      "words": "1,037 (minimum 1,000)"
+    },
+    {
+      "path": "/us/hsa-calculator",
+      "file": "us/hsa-calculator.md",
+      "title": "HSA Calculator: Tax Savings and Growth (2026) | FigSumo",
+      "verify_flags": 0,
+      "words": "1,022 (minimum 1,000)"
+    },
+    {
+      "path": "/inflation-calculator",
+      "file": "inflation-calculator.md",
+      "title": "Inflation Calculator: Future Cost and Buying Power | FigSumo",
+      "verify_flags": 0,
+      "words": "1,009 (minimum 1,000)"
+    },
+    {
+      "path": "/interest-calculator",
+      "file": "interest-calculator.md",
+      "title": "Interest Calculator: Simple and Compound Interest | FigSumo",
+      "verify_flags": 0,
+      "words": "1,008 (minimum 1,000)"
+    },
+    {
+      "path": "/interest-rate-calculator",
+      "file": "interest-rate-calculator.md",
+      "title": "Interest Rate Calculator: Find the Rate on a Loan | FigSumo",
+      "verify_flags": 0,
+      "words": "1,006 (minimum 1,000)"
+    },
+    {
+      "path": "/investment-calculator",
+      "file": "investment-calculator.md",
+      "title": "Investment Calculator: Growth, Contributions & Returns | FigSumo",
+      "verify_flags": 0,
+      "words": "1,049 (minimum 1,000)"
+    },
+    {
+      "path": "/us/ira-calculator",
+      "file": "us/ira-calculator.md",
+      "title": "Traditional IRA Calculator: Tax-Deferred Growth | FigSumo",
+      "verify_flags": 1,
+      "words": "1,014 (minimum 1,000)"
+    },
+    {
+      "path": "/irr-calculator",
+      "file": "irr-calculator.md",
+      "title": "IRR Calculator: Internal Rate of Return | FigSumo",
+      "verify_flags": 0,
+      "words": "1,007 (minimum 1,000)"
+    },
+    {
+      "path": "/uk/isa-calculator",
+      "file": "uk/isa-calculator.md",
+      "title": "ISA Calculator 2026/27: Allowance, LISA Bonus & Growth | FigSumo",
+      "verify_flags": 0,
+      "words": "1,114 (minimum 1,000)"
+    },
+    {
+      "path": "/ca/land-transfer-tax-calculator",
+      "file": "ca/land-transfer-tax-calculator.md",
+      "title": "Land Transfer Tax Calculator: Ontario, BC & More | FigSumo",
+      "verify_flags": 8,
+      "words": "1,036 (minimum 1,000)"
+    },
+    {
+      "path": "/uk/lbtt-calculator",
+      "file": "uk/lbtt-calculator.md",
+      "title": "LBTT Calculator: Scotland Land & Buildings Tax | FigSumo",
+      "verify_flags": 1,
+      "words": "1,032 (minimum 1,000)"
+    },
+    {
+      "path": "/lease-calculator",
+      "file": "lease-calculator.md",
+      "title": "Lease Calculator: Payment, Rate or Residual | FigSumo",
+      "verify_flags": 0,
+      "words": "1,007 (minimum 1,000)"
+    },
+    {
+      "path": "/us/life-insurance-calculator",
+      "file": "us/life-insurance-calculator.md",
+      "title": "Life Insurance Needs Calculator (DIME Method) | FigSumo",
+      "verify_flags": 0,
+      "words": "1,008 (minimum 1,000)"
+    },
+    {
+      "path": "/loan-calculator",
+      "file": "loan-calculator.md",
+      "title": "Loan Calculator: Monthly Payment, Interest & Schedule | FigSumo",
+      "verify_flags": 0,
+      "words": "1,098 (minimum 1,000)"
+    },
+    {
+      "path": "/loan-comparison-calculator",
+      "file": "loan-comparison-calculator.md",
+      "title": "Loan Comparison Calculator: Compare Up to 4 Loans | FigSumo",
+      "verify_flags": 0,
+      "words": "1,076 (minimum 1,000)"
+    },
+    {
+      "path": "/uk/ltt-calculator",
+      "file": "uk/ltt-calculator.md",
+      "title": "Land Transaction Tax Calculator (Wales) | FigSumo",
+      "verify_flags": 1,
+      "words": "1,033 (minimum 1,000)"
+    },
+    {
+      "path": "/margin-calculator",
+      "file": "margin-calculator.md",
+      "title": "Profit Margin Calculator: Margin vs Markup | FigSumo",
+      "verify_flags": 0,
+      "words": "1,010 (minimum 1,000)"
+    },
+    {
+      "path": "/markup-calculator",
+      "file": "markup-calculator.md",
+      "title": "Markup Calculator: Price From Cost and Markup | FigSumo",
+      "verify_flags": 0,
+      "words": "679 (minimum 600)"
+    },
+    {
+      "path": "/us/marriage-tax-calculator",
+      "file": "us/marriage-tax-calculator.md",
+      "title": "Marriage Penalty Calculator: Joint vs Single Tax (2026) | FigSumo",
+      "verify_flags": 1,
+      "words": "1,007 (minimum 1,000)"
+    },
+    {
+      "path": "/mortgage-amortization-calculator",
+      "file": "mortgage-amortization-calculator.md",
+      "title": "Mortgage Amortization Schedule Calculator | FigSumo",
+      "verify_flags": 0,
+      "words": "1,006 (minimum 1,000)"
+    },
+    {
+      "path": "/mortgage-calculator",
+      "file": "mortgage-calculator.md",
+      "title": "Mortgage Calculator with PMI, Taxes, Insurance & HOA | FigSumo",
+      "verify_flags": 0,
+      "words": "1,435 (minimum 1,000)"
+    },
+    {
+      "path": "/mortgage-payoff-calculator",
+      "file": "mortgage-payoff-calculator.md",
+      "title": "Mortgage Payoff Calculator: Pay Off Your Mortgage Early | FigSumo",
+      "verify_flags": 0,
+      "words": "1,006 (minimum 1,000)"
+    },
+    {
+      "path": "/mutual-fund-calculator",
+      "file": "mutual-fund-calculator.md",
+      "title": "Mutual Fund Calculator: Returns After Fees | FigSumo",
+      "verify_flags": 0,
+      "words": "1,015 (minimum 1,000)"
+    },
+    {
+      "path": "/payback-period-calculator",
+      "file": "payback-period-calculator.md",
+      "title": "Payback Period Calculator (Simple & Discounted) | FigSumo",
+      "verify_flags": 0,
+      "words": "1,003 (minimum 1,000)"
+    },
+    {
+      "path": "/payment-calculator",
+      "file": "payment-calculator.md",
+      "title": "Payment Calculator: Solve for Payment or Term | FigSumo",
+      "verify_flags": 0,
+      "words": "1,009 (minimum 1,000)"
+    },
+    {
+      "path": "/pension-calculator",
+      "file": "pension-calculator.md",
+      "title": "Defined Benefit Pension Calculator | FigSumo",
+      "verify_flags": 0,
+      "words": "1,013 (minimum 1,000)"
+    },
+    {
+      "path": "/personal-loan-calculator",
+      "file": "personal-loan-calculator.md",
+      "title": "Personal Loan Calculator with Origination Fee | FigSumo",
+      "verify_flags": 1,
+      "words": "1,004 (minimum 1,000)"
+    },
+    {
+      "path": "/us/pmi-calculator",
+      "file": "us/pmi-calculator.md",
+      "title": "PMI Calculator: Cost and Removal Date | FigSumo",
+      "verify_flags": 0,
+      "words": "1,008 (minimum 1,000)"
+    },
+    {
+      "path": "/present-value-calculator",
+      "file": "present-value-calculator.md",
+      "title": "Present Value Calculator: Lump Sum and Annuity | FigSumo",
+      "verify_flags": 0,
+      "words": "1,007 (minimum 1,000)"
+    },
+    {
+      "path": "/us/property-tax-calculator",
+      "file": "us/property-tax-calculator.md",
+      "title": "Property Tax Calculator | FigSumo",
+      "verify_flags": 1,
+      "words": "1,011 (minimum 1,000)"
+    },
+    {
+      "path": "/refinance-calculator",
+      "file": "refinance-calculator.md",
+      "title": "Mortgage Refinance Calculator: Break-Even & Savings | FigSumo",
+      "verify_flags": 0,
+      "words": "1,040 (minimum 1,000)"
+    },
+    {
+      "path": "/rent-calculator",
+      "file": "rent-calculator.md",
+      "title": "Rent Affordability Calculator: How Much Rent? | FigSumo",
+      "verify_flags": 0,
+      "words": "1,024 (minimum 1,000)"
+    },
+    {
+      "path": "/rent-vs-buy-calculator",
+      "file": "rent-vs-buy-calculator.md",
+      "title": "Rent vs Buy Calculator: Total Cost Comparison | FigSumo",
+      "verify_flags": 0,
+      "words": "1,044 (minimum 1,000)"
+    },
+    {
+      "path": "/rental-property-calculator",
+      "file": "rental-property-calculator.md",
+      "title": "Rental Property Calculator: Cash Flow and ROI | FigSumo",
+      "verify_flags": 0,
+      "words": "1,006 (minimum 1,000)"
+    },
+    {
+      "path": "/retirement-calculator",
+      "file": "retirement-calculator.md",
+      "title": "Retirement Calculator: How Much Will I Have Saved? | FigSumo",
+      "verify_flags": 0,
+      "words": "1,079 (minimum 1,000)"
+    },
+    {
+      "path": "/us/rmd-calculator",
+      "file": "us/rmd-calculator.md",
+      "title": "Required Minimum Distribution (RMD) Calculator | FigSumo",
+      "verify_flags": 1,
+      "words": "1,036 (minimum 1,000)"
+    },
+    {
+      "path": "/roi-calculator",
+      "file": "roi-calculator.md",
+      "title": "ROI Calculator: Return on Investment & Annualized ROI | FigSumo",
+      "verify_flags": 2,
+      "words": "1,007 (minimum 1,000)"
+    },
+    {
+      "path": "/us/roth-ira-calculator",
+      "file": "us/roth-ira-calculator.md",
+      "title": "Roth IRA Calculator 2026: Contribution Limits & Growth | FigSumo",
+      "verify_flags": 0,
+      "words": "1,012 (minimum 1,000)"
+    },
+    {
+      "path": "/ca/rrsp-calculator",
+      "file": "ca/rrsp-calculator.md",
+      "title": "RRSP Calculator 2026: Tax Refund, Limit & Growth | FigSumo",
+      "verify_flags": 1,
+      "words": "1,118 (minimum 1,000)"
+    },
+    {
+      "path": "/salary-calculator",
+      "file": "salary-calculator.md",
+      "title": "Salary Converter: Hourly, Weekly, Monthly, Annual | FigSumo",
+      "verify_flags": 0,
+      "words": "1,022 (minimum 1,000)"
+    },
+    {
+      "path": "/uk/salary-sacrifice-calculator",
+      "file": "uk/salary-sacrifice-calculator.md",
+      "title": "UK Salary Sacrifice Pension Calculator | FigSumo",
+      "verify_flags": 1,
+      "words": "1,075 (minimum 1,000)"
+    },
+    {
+      "path": "/us/sales-tax-calculator",
+      "file": "us/sales-tax-calculator.md",
+      "title": "Sales Tax Calculator: Add or Remove Tax | FigSumo",
+      "verify_flags": 1,
+      "words": "1,022 (minimum 1,000)"
+    },
+    {
+      "path": "/savings-calculator",
+      "file": "savings-calculator.md",
+      "title": "Savings Calculator: Reach a Savings Goal Faster | FigSumo",
+      "verify_flags": 0,
+      "words": "1,054 (minimum 1,000)"
+    },
+    {
+      "path": "/us/self-employment-tax-calculator",
+      "file": "us/self-employment-tax-calculator.md",
+      "title": "Self-Employment Tax Calculator 2026 | FigSumo",
+      "verify_flags": 0,
+      "words": "1,043 (minimum 1,000)"
+    },
+    {
+      "path": "/simple-interest-calculator",
+      "file": "simple-interest-calculator.md",
+      "title": "Simple Interest Calculator: I = P \u00d7 r \u00d7 t | FigSumo",
+      "verify_flags": 0,
+      "words": "1,003 (minimum 1,000)"
+    },
+    {
+      "path": "/us/social-security-calculator",
+      "file": "us/social-security-calculator.md",
+      "title": "Social Security Claiming Age Calculator | FigSumo",
+      "verify_flags": 0,
+      "words": "1,024 (minimum 1,000)"
+    },
+    {
+      "path": "/uk/stamp-duty-calculator",
+      "file": "uk/stamp-duty-calculator.md",
+      "title": "Stamp Duty Calculator 2026: SDLT for England & NI | FigSumo",
+      "verify_flags": 0,
+      "words": "1,007 (minimum 1,000)"
+    },
+    {
+      "path": "/student-loan-calculator",
+      "file": "student-loan-calculator.md",
+      "title": "Student Loan Calculator: Payment & Payoff Date | FigSumo",
+      "verify_flags": 2,
+      "words": "1,023 (minimum 1,000)"
+    },
+    {
+      "path": "/ca/tfsa-calculator",
+      "file": "ca/tfsa-calculator.md",
+      "title": "TFSA Calculator 2026: Contribution Room & Growth | FigSumo",
+      "verify_flags": 0,
+      "words": "1,068 (minimum 1,000)"
+    },
+    {
+      "path": "/time-value-of-money-calculator",
+      "file": "time-value-of-money-calculator.md",
+      "title": "Time Value of Money Calculator: PV, PMT, FV | FigSumo",
+      "verify_flags": 0,
+      "words": "1,066 (minimum 1,000)"
+    },
+    {
+      "path": "/uk/capital-gains-tax-calculator",
+      "file": "uk/capital-gains-tax-calculator.md",
+      "title": "UK Capital Gains Tax Calculator 2026/27 | FigSumo",
+      "verify_flags": 0,
+      "words": "1,056 (minimum 1,000)"
+    },
+    {
+      "path": "/uk/dividend-tax-calculator",
+      "file": "uk/dividend-tax-calculator.md",
+      "title": "UK Dividend Tax Calculator 2026/27 | FigSumo",
+      "verify_flags": 0,
+      "words": "1,103 (minimum 1,000)"
+    },
+    {
+      "path": "/uk/income-tax-calculator",
+      "file": "uk/income-tax-calculator.md",
+      "title": "UK Income Tax Calculator 2026/27 incl. Scotland | FigSumo",
+      "verify_flags": 0,
+      "words": "1,015 (minimum 1,000)"
+    },
+    {
+      "path": "/uk/mortgage-calculator",
+      "file": "uk/mortgage-calculator.md",
+      "title": "UK Mortgage Calculator: Repayment & Interest-Only | FigSumo",
+      "verify_flags": 0,
+      "words": "1,232 (minimum 1,000)"
+    },
+    {
+      "path": "/uk/student-loan-repayment-calculator",
+      "file": "uk/student-loan-repayment-calculator.md",
+      "title": "UK Student Loan Repayment Calculator (Plans 1, 2, 4, 5) | FigSumo",
+      "verify_flags": 0,
+      "words": "1,008 (minimum 1,000)"
+    },
+    {
+      "path": "/uk/take-home-pay-calculator",
+      "file": "uk/take-home-pay-calculator.md",
+      "title": "UK Take-Home Pay Calculator 2026/27: Tax, NI & Loans | FigSumo",
+      "verify_flags": 0,
+      "words": "1,157 (minimum 1,000)"
+    },
+    {
+      "path": "/uk/workplace-pension-calculator",
+      "file": "uk/workplace-pension-calculator.md",
+      "title": "UK Workplace Pension Calculator (Auto-Enrolment) | FigSumo",
+      "verify_flags": 2,
+      "words": "1,007 (minimum 1,000)"
+    },
+    {
+      "path": "/us/capital-gains-tax-calculator",
+      "file": "us/capital-gains-tax-calculator.md",
+      "title": "US Capital Gains Tax Calculator 2026 | FigSumo",
+      "verify_flags": 0,
+      "words": "1,029 (minimum 1,000)"
+    },
+    {
+      "path": "/us/estate-tax-calculator",
+      "file": "us/estate-tax-calculator.md",
+      "title": "US Federal Estate Tax Calculator (2026 Exemption) | FigSumo",
+      "verify_flags": 2,
+      "words": "1,175 (minimum 1,000)"
+    },
+    {
+      "path": "/us/income-tax-calculator",
+      "file": "us/income-tax-calculator.md",
+      "title": "Federal Income Tax Calculator 2026: Brackets & Rates | FigSumo",
+      "verify_flags": 0,
+      "words": "1,038 (minimum 1,000)"
+    },
+    {
+      "path": "/us/paycheck-calculator",
+      "file": "us/paycheck-calculator.md",
+      "title": "Paycheck Calculator 2026: Federal Take-Home Pay | FigSumo",
+      "verify_flags": 0,
+      "words": "1,068 (minimum 1,000)"
+    },
+    {
+      "path": "/us/state-income-tax-calculator",
+      "file": "us/state-income-tax-calculator.md",
+      "title": "US State Income Tax Calculator 2026 | FigSumo",
+      "verify_flags": 2,
+      "words": "1,058 (minimum 1,000)"
+    },
+    {
+      "path": "/us/va-loan-calculator",
+      "file": "us/va-loan-calculator.md",
+      "title": "VA Loan Calculator with Funding Fee | FigSumo",
+      "verify_flags": 0,
+      "words": "1,018 (minimum 1,000)"
+    },
+    {
+      "path": "/vat-calculator",
+      "file": "vat-calculator.md",
+      "title": "VAT Calculator: Add or Remove VAT | FigSumo",
+      "verify_flags": 1,
+      "words": "1,027 (minimum 1,000)"
+    },
+    {
+      "path": "/us/w4-withholding-calculator",
+      "file": "us/w4-withholding-calculator.md",
+      "title": "W-4 Withholding Estimator 2026 | FigSumo",
+      "verify_flags": 0,
+      "words": "1,082 (minimum 1,000)"
+    },
+    {
+      "path": "/army-body-fat-calculator",
+      "file": "army-body-fat-calculator.md",
+      "title": "Army Body Fat Calculator (Tape Test Estimate) | FigSumo",
+      "verify_flags": 1,
+      "words": "1,020 (minimum 1,000)"
+    },
+    {
+      "path": "/bac-calculator",
+      "file": "bac-calculator.md",
+      "title": "Blood Alcohol Content (BAC) Estimator | FigSumo",
+      "verify_flags": 1,
+      "words": "1,061 (minimum 1,000)"
+    },
+    {
+      "path": "/bmi-calculator",
+      "file": "bmi-calculator.md",
+      "title": "BMI Calculator for Adults & Children (Metric/Imperial) | FigSumo",
+      "verify_flags": 0,
+      "words": "1,058 (minimum 1,000)"
+    },
+    {
+      "path": "/bmr-calculator",
+      "file": "bmr-calculator.md",
+      "title": "BMR Calculator: Basal Metabolic Rate (Mifflin-St Jeor) | FigSumo",
+      "verify_flags": 0,
+      "words": "1,031 (minimum 1,000)"
+    },
+    {
+      "path": "/body-fat-calculator",
+      "file": "body-fat-calculator.md",
+      "title": "Body Fat Calculator: U.S. Navy Tape-Measure Method | FigSumo",
+      "verify_flags": 0,
+      "words": "1,075 (minimum 1,000)"
+    },
+    {
+      "path": "/body-type-calculator",
+      "file": "body-type-calculator.md",
+      "title": "Body Frame Size Calculator (Wrist Measurement) | FigSumo",
+      "verify_flags": 0,
+      "words": "1,025 (minimum 1,000)"
+    },
+    {
+      "path": "/body-surface-area-calculator",
+      "file": "body-surface-area-calculator.md",
+      "title": "Body Surface Area (BSA) Calculator: Mosteller & DuBois | FigSumo",
+      "verify_flags": 0,
+      "words": "1,041 (minimum 1,000)"
+    },
+    {
+      "path": "/calorie-calculator",
+      "file": "calorie-calculator.md",
+      "title": "Calorie Calculator: Daily Calories (TDEE) in kcal or kJ | FigSumo",
+      "verify_flags": 0,
+      "words": "1,067 (minimum 1,000)"
+    },
+    {
+      "path": "/calorie-deficit-calculator",
+      "file": "calorie-deficit-calculator.md",
+      "title": "Calorie Deficit Calculator: Weight Loss by Date | FigSumo",
+      "verify_flags": 0,
+      "words": "1,047 (minimum 1,000)"
+    },
+    {
+      "path": "/calories-burned-calculator",
+      "file": "calories-burned-calculator.md",
+      "title": "Calories Burned Calculator by Activity (METs) | FigSumo",
+      "verify_flags": 6,
+      "words": "1,011 (minimum 1,000)"
+    },
+    {
+      "path": "/carbohydrate-calculator",
+      "file": "carbohydrate-calculator.md",
+      "title": "Carbohydrate Calculator: Daily Carbs in Grams | FigSumo",
+      "verify_flags": 0,
+      "words": "1,066 (minimum 1,000)"
+    },
+    {
+      "path": "/conception-calculator",
+      "file": "conception-calculator.md",
+      "title": "Conception Date Calculator from Due Date or LMP | FigSumo",
+      "verify_flags": 0,
+      "words": "1,102 (minimum 1,000)"
+    },
+    {
+      "path": "/due-date-calculator",
+      "file": "due-date-calculator.md",
+      "title": "Due Date Calculator: Estimate Your Baby's Due Date | FigSumo",
+      "verify_flags": 0,
+      "words": "1,104 (minimum 1,000)"
+    },
+    {
+      "path": "/gfr-calculator",
+      "file": "gfr-calculator.md",
+      "title": "eGFR Calculator (CKD-EPI 2021) | FigSumo",
+      "verify_flags": 1,
+      "words": "1,091 (minimum 1,000)"
+    },
+    {
+      "path": "/fat-intake-calculator",
+      "file": "fat-intake-calculator.md",
+      "title": "Fat Intake Calculator: Daily Fat in Grams | FigSumo",
+      "verify_flags": 0,
+      "words": "1,002 (minimum 1,000)"
+    },
+    {
+      "path": "/healthy-weight-calculator",
+      "file": "healthy-weight-calculator.md",
+      "title": "Healthy Weight Range Calculator by Height | FigSumo",
+      "verify_flags": 0,
+      "words": "1,035 (minimum 1,000)"
+    },
+    {
+      "path": "/ideal-weight-calculator",
+      "file": "ideal-weight-calculator.md",
+      "title": "Ideal Body Weight Calculator: Devine, Robinson & Miller | FigSumo",
+      "verify_flags": 0,
+      "words": "1,065 (minimum 1,000)"
+    },
+    {
+      "path": "/lean-body-mass-calculator",
+      "file": "lean-body-mass-calculator.md",
+      "title": "Lean Body Mass Calculator: Boer, James & Hume | FigSumo",
+      "verify_flags": 0,
+      "words": "1,032 (minimum 1,000)"
+    },
+    {
+      "path": "/macro-calculator",
+      "file": "macro-calculator.md",
+      "title": "Macro Calculator: Protein, Carbs & Fat in Grams | FigSumo",
+      "verify_flags": 0,
+      "words": "1,037 (minimum 1,000)"
+    },
+    {
+      "path": "/one-rep-max-calculator",
+      "file": "one-rep-max-calculator.md",
+      "title": "One Rep Max (1RM) Calculator: Epley & Brzycki | FigSumo",
+      "verify_flags": 0,
+      "words": "640 (minimum 600)"
+    },
+    {
+      "path": "/ovulation-calculator",
+      "file": "ovulation-calculator.md",
+      "title": "Ovulation Calculator: Fertile Window Dates | FigSumo",
+      "verify_flags": 0,
+      "words": "1,087 (minimum 1,000)"
+    },
+    {
+      "path": "/pace-calculator",
+      "file": "pace-calculator.md",
+      "title": "Running Pace Calculator: Pace, Time or Distance | FigSumo",
+      "verify_flags": 0,
+      "words": "603 (minimum 600)"
+    },
+    {
+      "path": "/period-calculator",
+      "file": "period-calculator.md",
+      "title": "Period Calculator: Next Period Dates | FigSumo",
+      "verify_flags": 0,
+      "words": "1,025 (minimum 1,000)"
+    },
+    {
+      "path": "/pregnancy-week-calculator",
+      "file": "pregnancy-week-calculator.md",
+      "title": "Pregnancy Week Calculator: How Far Along Am I? | FigSumo",
+      "verify_flags": 1,
+      "words": "1,027 (minimum 1,000)"
+    },
+    {
+      "path": "/pregnancy-weight-gain-calculator",
+      "file": "pregnancy-weight-gain-calculator.md",
+      "title": "Pregnancy Weight Gain Calculator (IOM Guidelines) | FigSumo",
+      "verify_flags": 1,
+      "words": "1,012 (minimum 1,000)"
+    },
+    {
+      "path": "/protein-calculator",
+      "file": "protein-calculator.md",
+      "title": "Protein Calculator: Grams of Protein per Day | FigSumo",
+      "verify_flags": 0,
+      "words": "1,104 (minimum 1,000)"
+    },
+    {
+      "path": "/target-heart-rate-calculator",
+      "file": "target-heart-rate-calculator.md",
+      "title": "Target Heart Rate Calculator by Age | FigSumo",
+      "verify_flags": 0,
+      "words": "1,033 (minimum 1,000)"
+    },
+    {
+      "path": "/tdee-calculator",
+      "file": "tdee-calculator.md",
+      "title": "TDEE Calculator: Total Daily Energy Expenditure | FigSumo",
+      "verify_flags": 0,
+      "words": "1,010 (minimum 1,000)"
+    },
+    {
+      "path": "/waist-to-height-ratio-calculator",
+      "file": "waist-to-height-ratio-calculator.md",
+      "title": "Waist-to-Height Ratio Calculator | FigSumo",
+      "verify_flags": 0,
+      "words": "1,037 (minimum 1,000)"
+    },
+    {
+      "path": "/area-calculator",
+      "file": "area-calculator.md",
+      "title": "Area Calculator: Square, Circle, Triangle & More | FigSumo",
+      "verify_flags": 0,
+      "words": "655 (minimum 600)"
+    },
+    {
+      "path": "/average-calculator",
+      "file": "average-calculator.md",
+      "title": "Average Calculator: Mean of a List of Numbers | FigSumo",
+      "verify_flags": 0,
+      "words": "640 (minimum 600)"
+    },
+    {
+      "path": "/basic-calculator",
+      "file": "basic-calculator.md",
+      "title": "Basic Online Calculator | FigSumo",
+      "verify_flags": 0,
+      "words": "669 (minimum 600)"
+    },
+    {
+      "path": "/big-number-calculator",
+      "file": "big-number-calculator.md",
+      "title": "Big Number Calculator: Exact Arithmetic on Huge Numbers | FigSumo",
+      "verify_flags": 0,
+      "words": "679 (minimum 600)"
+    },
+    {
+      "path": "/binary-calculator",
+      "file": "binary-calculator.md",
+      "title": "Binary Calculator: Add, Subtract, Convert | FigSumo",
+      "verify_flags": 0,
+      "words": "638 (minimum 600)"
+    },
+    {
+      "path": "/circle-calculator",
+      "file": "circle-calculator.md",
+      "title": "Circle Calculator: Radius, Circumference & Area | FigSumo",
+      "verify_flags": 0,
+      "words": "632 (minimum 600)"
+    },
+    {
+      "path": "/common-factor-calculator",
+      "file": "common-factor-calculator.md",
+      "title": "Common Factor Calculator | FigSumo",
+      "verify_flags": 0,
+      "words": "607 (minimum 600)"
+    },
+    {
+      "path": "/confidence-interval-calculator",
+      "file": "confidence-interval-calculator.md",
+      "title": "Confidence Interval Calculator for a Mean or Proportion | FigSumo",
+      "verify_flags": 0,
+      "words": "664 (minimum 600)"
+    },
+    {
+      "path": "/distance-between-points-calculator",
+      "file": "distance-between-points-calculator.md",
+      "title": "Distance Between Two Points Calculator (2D & 3D) | FigSumo",
+      "verify_flags": 0,
+      "words": "648 (minimum 600)"
+    },
+    {
+      "path": "/exponent-calculator",
+      "file": "exponent-calculator.md",
+      "title": "Exponent Calculator: Powers and Roots | FigSumo",
+      "verify_flags": 0,
+      "words": "629 (minimum 600)"
+    },
+    {
+      "path": "/factor-calculator",
+      "file": "factor-calculator.md",
+      "title": "Factor Calculator: All Factors of a Number | FigSumo",
+      "verify_flags": 0,
+      "words": "621 (minimum 600)"
+    },
+    {
+      "path": "/fraction-calculator",
+      "file": "fraction-calculator.md",
+      "title": "Fraction Calculator: Add, Subtract, Multiply, Divide | FigSumo",
+      "verify_flags": 0,
+      "words": "661 (minimum 600)"
+    },
+    {
+      "path": "/gcf-calculator",
+      "file": "gcf-calculator.md",
+      "title": "Greatest Common Factor (GCF) Calculator | FigSumo",
+      "verify_flags": 0,
+      "words": "642 (minimum 600)"
+    },
+    {
+      "path": "/half-life-calculator",
+      "file": "half-life-calculator.md",
+      "title": "Half-Life Calculator: Remaining Amount or Half-Life | FigSumo",
+      "verify_flags": 0,
+      "words": "617 (minimum 600)"
+    },
+    {
+      "path": "/hex-calculator",
+      "file": "hex-calculator.md",
+      "title": "Hex Calculator: Hexadecimal Arithmetic & Conversion | FigSumo",
+      "verify_flags": 0,
+      "words": "636 (minimum 600)"
+    },
+    {
+      "path": "/lcm-calculator",
+      "file": "lcm-calculator.md",
+      "title": "Least Common Multiple (LCM) Calculator | FigSumo",
+      "verify_flags": 0,
+      "words": "657 (minimum 600)"
+    },
+    {
+      "path": "/log-calculator",
+      "file": "log-calculator.md",
+      "title": "Logarithm Calculator: log, ln and Any Base | FigSumo",
+      "verify_flags": 0,
+      "words": "686 (minimum 600)"
+    },
+    {
+      "path": "/long-division-calculator",
+      "file": "long-division-calculator.md",
+      "title": "Long Division Calculator with Remainders and Steps | FigSumo",
+      "verify_flags": 0,
+      "words": "625 (minimum 600)"
+    },
+    {
+      "path": "/matrix-calculator",
+      "file": "matrix-calculator.md",
+      "title": "Matrix Calculator: Multiply, Inverse, Determinant | FigSumo",
+      "verify_flags": 0,
+      "words": "606 (minimum 600)"
+    },
+    {
+      "path": "/mean-median-mode-range-calculator",
+      "file": "mean-median-mode-range-calculator.md",
+      "title": "Mean, Median, Mode and Range Calculator | FigSumo",
+      "verify_flags": 0,
+      "words": "624 (minimum 600)"
+    },
+    {
+      "path": "/number-sequence-calculator",
+      "file": "number-sequence-calculator.md",
+      "title": "Arithmetic & Geometric Sequence Calculator | FigSumo",
+      "verify_flags": 0,
+      "words": "652 (minimum 600)"
+    },
+    {
+      "path": "/p-value-calculator",
+      "file": "p-value-calculator.md",
+      "title": "P-Value Calculator from z, t, Chi-Square or F | FigSumo",
+      "verify_flags": 0,
+      "words": "641 (minimum 600)"
+    },
+    {
+      "path": "/percent-error-calculator",
+      "file": "percent-error-calculator.md",
+      "title": "Percent Error Calculator | FigSumo",
+      "verify_flags": 0,
+      "words": "641 (minimum 600)"
+    },
+    {
+      "path": "/percentage-calculator",
+      "file": "percentage-calculator.md",
+      "title": "Percentage Calculator: X% of Y, Percent Change & More | FigSumo",
+      "verify_flags": 0,
+      "words": "627 (minimum 600)"
+    },
+    {
+      "path": "/permutation-and-combination-calculator",
+      "file": "permutation-and-combination-calculator.md",
+      "title": "Permutation and Combination Calculator (nPr, nCr) | FigSumo",
+      "verify_flags": 1,
+      "words": "701 (minimum 600)"
+    },
+    {
+      "path": "/prime-factorization-calculator",
+      "file": "prime-factorization-calculator.md",
+      "title": "Prime Factorization Calculator with Factor Tree | FigSumo",
+      "verify_flags": 0,
+      "words": "603 (minimum 600)"
+    },
+    {
+      "path": "/probability-calculator",
+      "file": "probability-calculator.md",
+      "title": "Probability Calculator: Two Events, Series & Normal | FigSumo",
+      "verify_flags": 0,
+      "words": "677 (minimum 600)"
+    },
+    {
+      "path": "/pythagorean-theorem-calculator",
+      "file": "pythagorean-theorem-calculator.md",
+      "title": "Pythagorean Theorem Calculator: Find a, b or c | FigSumo",
+      "verify_flags": 0,
+      "words": "604 (minimum 600)"
+    },
+    {
+      "path": "/quadratic-formula-calculator",
+      "file": "quadratic-formula-calculator.md",
+      "title": "Quadratic Equation Solver: Real & Complex Roots | FigSumo",
+      "verify_flags": 0,
+      "words": "614 (minimum 600)"
+    },
+    {
+      "path": "/random-number-generator",
+      "file": "random-number-generator.md",
+      "title": "Random Number Generator: Range, Count, No Repeats | FigSumo",
+      "verify_flags": 0,
+      "words": "623 (minimum 600)"
+    },
+    {
+      "path": "/ratio-calculator",
+      "file": "ratio-calculator.md",
+      "title": "Ratio Calculator: Simplify and Scale Ratios | FigSumo",
+      "verify_flags": 0,
+      "words": "605 (minimum 600)"
+    },
+    {
+      "path": "/right-triangle-calculator",
+      "file": "right-triangle-calculator.md",
+      "title": "Right Triangle Calculator: Sides, Angles & Area | FigSumo",
+      "verify_flags": 0,
+      "words": "666 (minimum 600)"
+    },
+    {
+      "path": "/root-calculator",
+      "file": "root-calculator.md",
+      "title": "Root Calculator: Square, Cube and nth Roots | FigSumo",
+      "verify_flags": 0,
+      "words": "628 (minimum 600)"
+    },
+    {
+      "path": "/rounding-calculator",
+      "file": "rounding-calculator.md",
+      "title": "Rounding Calculator: Decimals, Significant Figures | FigSumo",
+      "verify_flags": 0,
+      "words": "647 (minimum 600)"
+    },
+    {
+      "path": "/sample-size-calculator",
+      "file": "sample-size-calculator.md",
+      "title": "Sample Size Calculator for Surveys | FigSumo",
+      "verify_flags": 0,
+      "words": "639 (minimum 600)"
+    },
+    {
+      "path": "/scientific-calculator",
+      "file": "scientific-calculator.md",
+      "title": "Free Online Scientific Calculator | FigSumo",
+      "verify_flags": 0,
+      "words": "634 (minimum 600)"
+    },
+    {
+      "path": "/scientific-notation-calculator",
+      "file": "scientific-notation-calculator.md",
+      "title": "Scientific Notation Calculator & Converter | FigSumo",
+      "verify_flags": 0,
+      "words": "644 (minimum 600)"
+    },
+    {
+      "path": "/slope-calculator",
+      "file": "slope-calculator.md",
+      "title": "Slope Calculator: Slope From Two Points | FigSumo",
+      "verify_flags": 1,
+      "words": "682 (minimum 600)"
+    },
+    {
+      "path": "/standard-deviation-calculator",
+      "file": "standard-deviation-calculator.md",
+      "title": "Standard Deviation Calculator (Sample & Population) | FigSumo",
+      "verify_flags": 0,
+      "words": "620 (minimum 600)"
+    },
+    {
+      "path": "/statistics-calculator",
+      "file": "statistics-calculator.md",
+      "title": "Descriptive Statistics Calculator | FigSumo",
+      "verify_flags": 0,
+      "words": "635 (minimum 600)"
+    },
+    {
+      "path": "/surface-area-calculator",
+      "file": "surface-area-calculator.md",
+      "title": "Surface Area Calculator for 3D Shapes | FigSumo",
+      "verify_flags": 0,
+      "words": "622 (minimum 600)"
+    },
+    {
+      "path": "/triangle-calculator",
+      "file": "triangle-calculator.md",
+      "title": "Triangle Calculator: Solve Any Triangle | FigSumo",
+      "verify_flags": 0,
+      "words": "669 (minimum 600)"
+    },
+    {
+      "path": "/volume-calculator",
+      "file": "volume-calculator.md",
+      "title": "Volume Calculator for 3D Shapes | FigSumo",
+      "verify_flags": 0,
+      "words": "669 (minimum 600)"
+    },
+    {
+      "path": "/z-score-calculator",
+      "file": "z-score-calculator.md",
+      "title": "Z-Score Calculator with Percentile | FigSumo",
+      "verify_flags": 0,
+      "words": "630 (minimum 600)"
+    },
+    {
+      "path": "/age-calculator",
+      "file": "age-calculator.md",
+      "title": "Age Calculator: Exact Age in Years, Months, Days | FigSumo",
+      "verify_flags": 0,
+      "words": "712 (minimum 600)"
+    },
+    {
+      "path": "/base64-encode-decode",
+      "file": "base64-encode-decode.md",
+      "title": "Base64 Encode and Decode Online | FigSumo",
+      "verify_flags": 0,
+      "words": "604 (minimum 600)"
+    },
+    {
+      "path": "/bra-size-calculator",
+      "file": "bra-size-calculator.md",
+      "title": "Bra Size Calculator (US, UK, EU) | FigSumo",
+      "verify_flags": 0,
+      "words": "669 (minimum 600)"
+    },
+    {
+      "path": "/btu-calculator",
+      "file": "btu-calculator.md",
+      "title": "BTU Calculator for Heating and Cooling | FigSumo",
+      "verify_flags": 0,
+      "words": "605 (minimum 600)"
+    },
+    {
+      "path": "/concrete-calculator",
+      "file": "concrete-calculator.md",
+      "title": "Concrete Calculator: Slabs, Footings, Columns | FigSumo",
+      "verify_flags": 0,
+      "words": "641 (minimum 600)"
+    },
+    {
+      "path": "/date-calculator",
+      "file": "date-calculator.md",
+      "title": "Date Calculator: Add or Subtract Days | FigSumo",
+      "verify_flags": 0,
+      "words": "623 (minimum 600)"
+    },
+    {
+      "path": "/day-counter",
+      "file": "day-counter.md",
+      "title": "Day Counter: Days Between Two Dates | FigSumo",
+      "verify_flags": 0,
+      "words": "628 (minimum 600)"
+    },
+    {
+      "path": "/day-of-the-week-calculator",
+      "file": "day-of-the-week-calculator.md",
+      "title": "What Day of the Week Was It? Calculator | FigSumo",
+      "verify_flags": 0,
+      "words": "602 (minimum 600)"
+    },
+    {
+      "path": "/density-calculator",
+      "file": "density-calculator.md",
+      "title": "Density Calculator: Mass, Volume or Density | FigSumo",
+      "verify_flags": 0,
+      "words": "600 (minimum 600)"
+    },
+    {
+      "path": "/dew-point-calculator",
+      "file": "dew-point-calculator.md",
+      "title": "Dew Point Calculator from Temperature & Humidity | FigSumo",
+      "verify_flags": 0,
+      "words": "658 (minimum 600)"
+    },
+    {
+      "path": "/dice-roller",
+      "file": "dice-roller.md",
+      "title": "Online Dice Roller: d4, d6, d8, d10, d12, d20 | FigSumo",
+      "verify_flags": 0,
+      "words": "600 (minimum 600)"
+    },
+    {
+      "path": "/download-time-calculator",
+      "file": "download-time-calculator.md",
+      "title": "Download Time & Bandwidth Calculator | FigSumo",
+      "verify_flags": 0,
+      "words": "607 (minimum 600)"
+    },
+    {
+      "path": "/electricity-calculator",
+      "file": "electricity-calculator.md",
+      "title": "Electricity Cost Calculator for Appliances | FigSumo",
+      "verify_flags": 0,
+      "words": "669 (minimum 600)"
+    },
+    {
+      "path": "/engine-displacement-horsepower-calculator",
+      "file": "engine-displacement-horsepower-calculator.md",
+      "title": "Engine Displacement and Horsepower Estimator | FigSumo",
+      "verify_flags": 0,
+      "words": "632 (minimum 600)"
+    },
+    {
+      "path": "/fuel-cost-calculator",
+      "file": "fuel-cost-calculator.md",
+      "title": "Fuel Cost Calculator for a Trip | FigSumo",
+      "verify_flags": 0,
+      "words": "631 (minimum 600)"
+    },
+    {
+      "path": "/fuel-economy-calculator",
+      "file": "fuel-economy-calculator.md",
+      "title": "Fuel Economy Calculator: MPG and L/100 km | FigSumo",
+      "verify_flags": 0,
+      "words": "626 (minimum 600)"
+    },
+    {
+      "path": "/gdp-calculator",
+      "file": "gdp-calculator.md",
+      "title": "GDP Growth Projection Calculator | FigSumo",
+      "verify_flags": 0,
+      "words": "623 (minimum 600)"
+    },
+    {
+      "path": "/golf-handicap-calculator",
+      "file": "golf-handicap-calculator.md",
+      "title": "Golf Handicap Index Calculator (World Handicap System) | FigSumo",
+      "verify_flags": 0,
+      "words": "682 (minimum 600)"
+    },
+    {
+      "path": "/gpa-calculator",
+      "file": "gpa-calculator.md",
+      "title": "GPA Calculator: Semester and Cumulative GPA | FigSumo",
+      "verify_flags": 0,
+      "words": "624 (minimum 600)"
+    },
+    {
+      "path": "/grade-calculator",
+      "file": "grade-calculator.md",
+      "title": "Grade Calculator: Weighted Grade and Final Exam Needed | FigSumo",
+      "verify_flags": 0,
+      "words": "606 (minimum 600)"
+    },
+    {
+      "path": "/gravel-calculator",
+      "file": "gravel-calculator.md",
+      "title": "Gravel Calculator: Cubic Yards and Tons | FigSumo",
+      "verify_flags": 0,
+      "words": "607 (minimum 600)"
+    },
+    {
+      "path": "/heat-index-calculator",
+      "file": "heat-index-calculator.md",
+      "title": "Heat Index Calculator (Feels-Like Temperature) | FigSumo",
+      "verify_flags": 0,
+      "words": "618 (minimum 600)"
+    },
+    {
+      "path": "/height-converter",
+      "file": "height-converter.md",
+      "title": "Height Converter: cm to Feet and Inches | FigSumo",
+      "verify_flags": 0,
+      "words": "626 (minimum 600)"
+    },
+    {
+      "path": "/horsepower-calculator",
+      "file": "horsepower-calculator.md",
+      "title": "Horsepower Calculator from Torque and RPM | FigSumo",
+      "verify_flags": 0,
+      "words": "624 (minimum 600)"
+    },
+    {
+      "path": "/hours-calculator",
+      "file": "hours-calculator.md",
+      "title": "Hours Calculator: Add and Convert Hours | FigSumo",
+      "verify_flags": 0,
+      "words": "641 (minimum 600)"
+    },
+    {
+      "path": "/ip-subnet-calculator",
+      "file": "ip-subnet-calculator.md",
+      "title": "IP Subnet Calculator (IPv4 and IPv6) | FigSumo",
+      "verify_flags": 0,
+      "words": "626 (minimum 600)"
+    },
+    {
+      "path": "/love-calculator",
+      "file": "love-calculator.md",
+      "title": "Love Calculator (Just for Fun) | FigSumo",
+      "verify_flags": 0,
+      "words": "644 (minimum 600)"
+    },
+    {
+      "path": "/mass-calculator",
+      "file": "mass-calculator.md",
+      "title": "Mass Calculator from Density and Volume | FigSumo",
+      "verify_flags": 0,
+      "words": "608 (minimum 600)"
+    },
+    {
+      "path": "/mileage-reimbursement-calculator",
+      "file": "mileage-reimbursement-calculator.md",
+      "title": "Mileage Reimbursement Calculator (IRS, CRA, HMRC Rates) | FigSumo",
+      "verify_flags": 0,
+      "words": "737 (minimum 600)"
+    },
+    {
+      "path": "/molarity-calculator",
+      "file": "molarity-calculator.md",
+      "title": "Molarity Calculator: Moles, Volume, Concentration | FigSumo",
+      "verify_flags": 0,
+      "words": "612 (minimum 600)"
+    },
+    {
+      "path": "/molecular-weight-calculator",
+      "file": "molecular-weight-calculator.md",
+      "title": "Molecular Weight Calculator from Chemical Formula | FigSumo",
+      "verify_flags": 0,
+      "words": "649 (minimum 600)"
+    },
+    {
+      "path": "/mulch-calculator",
+      "file": "mulch-calculator.md",
+      "title": "Mulch Calculator: Cubic Yards and Bags | FigSumo",
+      "verify_flags": 0,
+      "words": "612 (minimum 600)"
+    },
+    {
+      "path": "/ohms-law-calculator",
+      "file": "ohms-law-calculator.md",
+      "title": "Ohm's Law Calculator: Voltage, Current, Resistance | FigSumo",
+      "verify_flags": 0,
+      "words": "606 (minimum 600)"
+    },
+    {
+      "path": "/password-generator",
+      "file": "password-generator.md",
+      "title": "Strong Password Generator | FigSumo",
+      "verify_flags": 0,
+      "words": "616 (minimum 600)"
+    },
+    {
+      "path": "/resistor-calculator",
+      "file": "resistor-calculator.md",
+      "title": "Resistor Color Code Calculator (4, 5 and 6 Band) | FigSumo",
+      "verify_flags": 0,
+      "words": "622 (minimum 600)"
+    },
+    {
+      "path": "/roman-numeral-converter",
+      "file": "roman-numeral-converter.md",
+      "title": "Roman Numeral Converter | FigSumo",
+      "verify_flags": 0,
+      "words": "644 (minimum 600)"
+    },
+    {
+      "path": "/roofing-calculator",
+      "file": "roofing-calculator.md",
+      "title": "Roofing Calculator: Roof Area, Squares and Bundles | FigSumo",
+      "verify_flags": 0,
+      "words": "640 (minimum 600)"
+    },
+    {
+      "path": "/shoe-size-converter",
+      "file": "shoe-size-converter.md",
+      "title": "Shoe Size Converter: US, UK, EU | FigSumo",
+      "verify_flags": 0,
+      "words": "655 (minimum 600)"
+    },
+    {
+      "path": "/sleep-calculator",
+      "file": "sleep-calculator.md",
+      "title": "Sleep Calculator: Bedtime and Wake-Up Times | FigSumo",
+      "verify_flags": 0,
+      "words": "668 (minimum 600)"
+    },
+    {
+      "path": "/speed-calculator",
+      "file": "speed-calculator.md",
+      "title": "Speed, Distance and Time Calculator | FigSumo",
+      "verify_flags": 0,
+      "words": "613 (minimum 600)"
+    },
+    {
+      "path": "/square-footage-calculator",
+      "file": "square-footage-calculator.md",
+      "title": "Square Footage Calculator for Rooms and Lots | FigSumo",
+      "verify_flags": 0,
+      "words": "605 (minimum 600)"
+    },
+    {
+      "path": "/stair-calculator",
+      "file": "stair-calculator.md",
+      "title": "Stair Calculator: Rise, Run and Stringer Length | FigSumo",
+      "verify_flags": 2,
+      "words": "678 (minimum 600)"
+    },
+    {
+      "path": "/tile-calculator",
+      "file": "tile-calculator.md",
+      "title": "Tile Calculator: How Many Tiles Do I Need? | FigSumo",
+      "verify_flags": 0,
+      "words": "608 (minimum 600)"
+    },
+    {
+      "path": "/time-calculator",
+      "file": "time-calculator.md",
+      "title": "Time Calculator: Add or Subtract Time | FigSumo",
+      "verify_flags": 0,
+      "words": "613 (minimum 600)"
+    },
+    {
+      "path": "/time-card-calculator",
+      "file": "time-card-calculator.md",
+      "title": "Time Card Calculator with Breaks and Overtime | FigSumo",
+      "verify_flags": 0,
+      "words": "652 (minimum 600)"
+    },
+    {
+      "path": "/time-duration-calculator",
+      "file": "time-duration-calculator.md",
+      "title": "Time Duration Calculator: Time Between Two Times | FigSumo",
+      "verify_flags": 0,
+      "words": "602 (minimum 600)"
+    },
+    {
+      "path": "/time-zone-calculator",
+      "file": "time-zone-calculator.md",
+      "title": "Time Zone Converter: Compare Cities | FigSumo",
+      "verify_flags": 0,
+      "words": "628 (minimum 600)"
+    },
+    {
+      "path": "/tip-calculator",
+      "file": "tip-calculator.md",
+      "title": "Tip Calculator: Split the Bill | FigSumo",
+      "verify_flags": 0,
+      "words": "608 (minimum 600)"
+    },
+    {
+      "path": "/tire-size-calculator",
+      "file": "tire-size-calculator.md",
+      "title": "Tire Size Calculator: Compare Two Tire Sizes | FigSumo",
+      "verify_flags": 0,
+      "words": "615 (minimum 600)"
+    },
+    {
+      "path": "/unit-converter",
+      "file": "unit-converter.md",
+      "title": "Unit Converter: Length, Weight, Temperature & More | FigSumo",
+      "verify_flags": 0,
+      "words": "605 (minimum 600)"
+    },
+    {
+      "path": "/url-encode-decode",
+      "file": "url-encode-decode.md",
+      "title": "URL Encode and Decode Online | FigSumo",
+      "verify_flags": 0,
+      "words": "669 (minimum 600)"
+    },
+    {
+      "path": "/voltage-drop-calculator",
+      "file": "voltage-drop-calculator.md",
+      "title": "Voltage Drop Calculator for Copper and Aluminium Wire | FigSumo",
+      "verify_flags": 0,
+      "words": "718 (minimum 600)"
+    },
+    {
+      "path": "/weight-converter",
+      "file": "weight-converter.md",
+      "title": "Weight Converter: kg to lb and lb to kg | FigSumo",
+      "verify_flags": 0,
+      "words": "668 (minimum 600)"
+    },
+    {
+      "path": "/wind-chill-calculator",
+      "file": "wind-chill-calculator.md",
+      "title": "Wind Chill Calculator (NWS Formula) | FigSumo",
+      "verify_flags": 0,
+      "words": "656 (minimum 600)"
+    },
+    {
+      "path": "/embed/basic-calculator",
+      "file": "embed/basic-calculator.md",
+      "title": "Free Calculator Widget for Your Website | FigSumo",
+      "verify_flags": 0,
+      "words": "682 (minimum 600)"
+    },
+    {
+      "path": "/embed/concrete-calculator",
+      "file": "embed/concrete-calculator.md",
+      "title": "Free Concrete Calculator Widget for Your Website | FigSumo",
+      "verify_flags": 0,
+      "words": "603 (minimum 600)"
+    },
+    {
+      "path": "/embed/love-calculator",
+      "file": "embed/love-calculator.md",
+      "title": "Free Love Calculator Widget for Your Website | FigSumo",
+      "verify_flags": 0,
+      "words": "694 (minimum 600)"
+    },
+    {
+      "path": "/embed/mortgage-calculator",
+      "file": "embed/mortgage-calculator.md",
+      "title": "Free Mortgage Calculator Widget for Your Website | FigSumo",
+      "verify_flags": 0,
+      "words": "675 (minimum 600)"
+    },
+    {
+      "path": "/embed/scientific-calculator",
+      "file": "embed/scientific-calculator.md",
+      "title": "Free Scientific Calculator Widget for Your Website | FigSumo",
+      "verify_flags": 70,
+      "words": "642 (minimum 600)"
+    }
+  ]
+}
